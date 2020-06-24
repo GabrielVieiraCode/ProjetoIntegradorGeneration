@@ -1,0 +1,103 @@
+<!-- 
+<div class="fundo-cadastro">
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-md-6 mt-5 mb-5 borda-direita">
+
+
+                <div class="col-md-12 login">
+                    <h2 class="titulo">login</h2>
+                    <div>
+                        <div class="form-group w-75">
+                            <label for="exampleInputEmail1" class="texto">Nome de usuário ou e-mail *</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Ex: mestredahorta@mestredahorta.com.br"
+                                [(ngModel)]="login.nome">
+                        </div>
+                        <div class="form-group">
+                            <div>
+                                <label for="exampleInputPassword1" class="texto">Senha *</label>
+                            </div>
+                            <div class="d-flex w-75 ">
+                                <input type="password" class="form-control mr-3" id="exampleInputPassword1"
+                                    placeholder="Senha" [(ngModel)]="login.senha">
+                                <button type="submit" class="btn btn-entrar texto"
+                                    (click)="fazerLogin()">Entrar</button>
+                            </div>
+                            <div class="alert alert-danger mt-2 w-50" *ngIf="alerta" role="alert">
+                                <span>E-mail e senha incorretos </span>
+                            </div>
+                            <div class="mt-4">
+                                <button type="submit" class="btn btn-perdeu-senha texto">Perdeu a sua
+                                    senha?</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            
+
+
+            <div class="col-md-6 mb-5">
+
+                <div class="col-md-10 mt-5 mb-5 ">
+                    <h2 class="cadastro">quero me cadastrar</h2>
+
+                    <div>
+                        <div class="form-group">
+                            <label for="nome">Nome completo *</label>
+                            <input type="text" class="form-control" id="nome" placeholder="Nome"
+                                [(ngModel)]="cadastro.nome" required #nome="ngModel">
+                        </div>
+
+                        <div class="alert alert-danger" *ngIf="!nome.valid &&  nome.touched" role="alert">
+                            Insira o seu nome
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">E-mail *</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Ex: mestredahorta@mestredahorta.com.br"
+                                [(ngModel)]="cadastro.email" required #email="ngModel">
+                            <small id="emailHelp" class="form-text text-muted"></small>
+                        </div>
+                        <div class="alert alert-danger" *ngIf="!email.valid && email.touched" role="alert">
+                            Insira o seu e-mail
+                        </div>
+                        <div class="form-group">
+                            <label for="senha">Senha *</label>
+                            <input type="password" class="form-control" id="senha" placeholder="Senha"
+                                [(ngModel)]="cadastro.senha" required #senha="ngModel">
+                        </div>
+                        <div class="alert alert-danger" *ngIf="!senha.valid && senha.touched" role="alert">
+                            Insira uma senha
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmaSenha">Confirme sua senha *</label>
+                            <input type="password" class="form-control" id="confirmaSenha" placeholder="Senha"
+                                [(ngModel)]="confirmaSenha" required #senha1="ngModel">
+                        </div>
+                        <div class="alert alert-danger" *ngIf="senha1.value != senha.value && senha1.touched"
+                            role="alert">
+                            Senha não confere
+                        </div>
+
+
+                        <div>
+                            <button type="button" class="btn btn-entrar" (click)="cadastrar()">Cadastrar</button>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+</div> -->
