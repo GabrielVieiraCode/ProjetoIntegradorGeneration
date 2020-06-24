@@ -1,0 +1,19 @@
+.mapa{
+    margin-top: 45px;
+}
+
+
+
+label {
+    font-size: 18pt;
+    font-weight: lighter;
+}
+
+.container{
+    margin-top: 190px;
+}
+@media only screen and (max-width: 990px){
+    .container{
+        margin-top: 80px;
+    }
+}

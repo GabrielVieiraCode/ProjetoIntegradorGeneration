@@ -1,0 +1,63 @@
+button{
+    cursor: pointer;
+    color: green;
+    margin-bottom: 12px;
+    height: 50px;
+}
+p{
+    cursor: pointer;
+    color: green;
+}
+
+
+
+
+
+/* 
+h2 {
+    font-family: Arial, Verdana;
+    font-weight: 800;
+    font-size: 2.5rem;
+    color: #091f2f;
+    text-transform: uppercase;
+}
+.accordion-section .panel-default > .panel-heading {
+    border: 0;
+    background: #f4f4f4;
+    padding: 0;
+    
+}
+.accordion-section .panel-default .panel-title a {
+    display: block;
+    font-style: italic;
+    font-size: 1.5rem;
+}
+.accordion-section .panel-default .panel-title a:after {
+    font-family: 'Fredoka One', cursive;
+    font-style: normal;
+    font-size: 3rem;
+    content: "\f106";
+    color: #1f7de2;
+    float: right;
+    margin-top: -12px;
+    cursor: pointer
+}
+.accordion-section .panel-default .panel-title a.collapsed:after {
+    content: "\f107";
+}
+.accordion-section .panel-default .panel-body {
+    font-size: 1.2rem;
+} */
+
+.container{
+    margin-top: 190px;
+}
+.btn{
+    cursor: pointer;  
+}
+@media only screen and (max-width: 990px){
+    .container{
+        margin-top: 80px;
+    }
+    
+}

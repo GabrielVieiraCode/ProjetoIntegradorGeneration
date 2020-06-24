@@ -12,6 +12,10 @@ import { FooterComponent } from './footer/footer.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { ProdutosComponent } from './produtos/produtos.component';
+import { DescricaoComponent } from './descricao/descricao.component';
+import { FaqComponent } from './faq/faq.component';
+import { ContatoComponent } from './contato/contato.component';
+
 
 @NgModule({
   declarations: [
@@ -21,7 +25,10 @@ import { ProdutosComponent } from './produtos/produtos.component';
     FooterComponent,
     SobreNosComponent,
     CadastroComponent,
-    ProdutosComponent
+    ProdutosComponent,
+    DescricaoComponent,
+    FaqComponent,
+    ContatoComponent
   ],
   imports: [
     BrowserModule,

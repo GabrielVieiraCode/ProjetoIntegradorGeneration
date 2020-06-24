@@ -1,14 +1,15 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
-import { ProdutosComponent } from './produtos/produtos.component'
-/*import { ContatoComponent } from './contato/contato.component';
-import { AdministradorComponent } from './administrador/administrador.component';
+import { ProdutosComponent } from './produtos/produtos.component';
+import {DescricaoComponent} from './descricao/descricao.component';
+import { FaqComponent } from './faq/faq.component';
+import { ContatoComponent } from './contato/contato.component';
+/*import { AdministradorComponent } from './administrador/administrador.component';
 import { EditarComponent } from './editar/editar.component';
 import { DeletarComponent } from './deletar/deletar.component';
-import { FaqComponent } from './faq/faq.component'
 import { MeuperfilComponent } from './meuperfil/meuperfil.component'
 
 import { ProdutoComponent } from './administrador/produto/produto.component';
@@ -24,12 +25,13 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'quem-somos', component: SobreNosComponent },
   { path: 'cadastro', component: CadastroComponent },
-  { path: 'produtos', component: ProdutosComponent }
-  /*{ path: 'contato', component: ContatoComponent },
-  { path: 'administrador', component: AdministradorComponent },
+  { path: 'produtos', component: ProdutosComponent },
+  {path: 'descricao', component: DescricaoComponent},
+  { path: 'faq', component: FaqComponent },
+  { path: 'contato', component: ContatoComponent }
+  /*{ path: 'administrador', component: AdministradorComponent },
   { path: 'editar/:id', component: EditarComponent },
   { path: 'deletar/:id', component: DeletarComponent },
-  { path: 'faq', component: FaqComponent },
   { path: 'meuperfil', component: MeuperfilComponent },
 
   { path: 'administrador/produtos', component: ProdutoComponent },
