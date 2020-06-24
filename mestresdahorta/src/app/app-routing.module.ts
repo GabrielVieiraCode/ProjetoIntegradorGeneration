@@ -7,8 +7,8 @@ import { ProdutosComponent } from './produtos/produtos.component';
 import {DescricaoComponent} from './descricao/descricao.component';
 import { FaqComponent } from './faq/faq.component';
 import { ContatoComponent } from './contato/contato.component';
-/*import { AdministradorComponent } from './administrador/administrador.component';
-import { EditarComponent } from './editar/editar.component';
+import { AdministradorComponent } from './administrador/administrador.component';
+/*import { EditarComponent } from './editar/editar.component';
 import { DeletarComponent } from './deletar/deletar.component';
 import { MeuperfilComponent } from './meuperfil/meuperfil.component'
 
@@ -28,9 +28,9 @@ const routes: Routes = [
   { path: 'produtos', component: ProdutosComponent },
   {path: 'descricao', component: DescricaoComponent},
   { path: 'faq', component: FaqComponent },
-  { path: 'contato', component: ContatoComponent }
-  /*{ path: 'administrador', component: AdministradorComponent },
-  { path: 'editar/:id', component: EditarComponent },
+  { path: 'contato', component: ContatoComponent },
+  { path: 'administrador', component: AdministradorComponent}
+  /*{ path: 'editar/:id', component: EditarComponent },
   { path: 'deletar/:id', component: DeletarComponent },
   { path: 'meuperfil', component: MeuperfilComponent },
 

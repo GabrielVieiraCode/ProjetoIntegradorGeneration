@@ -15,6 +15,7 @@ import { ProdutosComponent } from './produtos/produtos.component';
 import { DescricaoComponent } from './descricao/descricao.component';
 import { FaqComponent } from './faq/faq.component';
 import { ContatoComponent } from './contato/contato.component';
+import { AdministradorComponent } from './administrador/administrador.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { ContatoComponent } from './contato/contato.component';
     ProdutosComponent,
     DescricaoComponent,
     FaqComponent,
-    ContatoComponent
+    ContatoComponent,
+    AdministradorComponent
   ],
   imports: [
     BrowserModule,
