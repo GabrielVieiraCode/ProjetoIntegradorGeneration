@@ -16,6 +16,12 @@ import { DescricaoComponent } from './descricao/descricao.component';
 import { FaqComponent } from './faq/faq.component';
 import { ContatoComponent } from './contato/contato.component';
 import { AdministradorComponent } from './administrador/administrador.component';
+import { ProdutoComponent } from './administrador/produto/produto.component';
+import { ProdutoEditarComponent } from './administrador/produto-editar/produto-editar.component';
+import { ProdutoDeletarComponent } from './administrador/produto-deletar/produto-deletar.component';
+import { UsuarioComponent } from './administrador/usuario/usuario.component';
+import { UsuarioEditarComponent } from './administrador/usuario-editar/usuario-editar.component';
+import { UsuarioDeletarComponent } from './administrador/usuario-deletar/usuario-deletar.component';
 
 
 @NgModule({
@@ -30,7 +36,13 @@ import { AdministradorComponent } from './administrador/administrador.component'
     DescricaoComponent,
     FaqComponent,
     ContatoComponent,
-    AdministradorComponent
+    AdministradorComponent,
+    ProdutoComponent,
+    ProdutoEditarComponent,
+    ProdutoDeletarComponent,
+    UsuarioComponent,
+    UsuarioEditarComponent,
+    UsuarioDeletarComponent
   ],
   imports: [
     BrowserModule,
