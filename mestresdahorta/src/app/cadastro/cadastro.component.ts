@@ -53,7 +53,7 @@ export class CadastroComponent implements OnInit {
   fazerLogin() {
 
     // VALIDAÇÃO CAMPO NOME LOG IN
-    if (this.login.nome == null || this.login.nome == "") {
+    if (this.login.usuario == null || this.login.usuario == "") {
       this.alerta = true
     }
     else if (this.login.senha == null || this.login.senha == "") {
