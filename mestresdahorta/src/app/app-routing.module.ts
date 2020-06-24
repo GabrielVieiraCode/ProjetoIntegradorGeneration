@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
-import { ProdutosComponent } from './produtos/produtos.component';
+import { ProdutosComponent } from './produtos/produtos.component'
 /*import { ContatoComponent } from './contato/contato.component';
 import { AdministradorComponent } from './administrador/administrador.component';
 import { EditarComponent } from './editar/editar.component';
@@ -24,7 +24,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'quem-somos', component: SobreNosComponent },
   { path: 'cadastro', component: CadastroComponent },
-  { path: 'produtos', component: ProdutosComponent },
+  { path: 'produtos', component: ProdutosComponent }
   /*{ path: 'contato', component: ContatoComponent },
   { path: 'administrador', component: AdministradorComponent },
   { path: 'editar/:id', component: EditarComponent },
