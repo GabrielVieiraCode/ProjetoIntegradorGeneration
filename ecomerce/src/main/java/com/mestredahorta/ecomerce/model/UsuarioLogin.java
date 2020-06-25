@@ -1,7 +1,8 @@
 package com.mestredahorta.ecomerce.model;
 
 public class UsuarioLogin {
-private String nome;
+	
+   private String nome;
 	
 	private String usuario;
 	

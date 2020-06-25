@@ -17,30 +17,30 @@ public class produto {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
-	@Column(name = "nm_produto", nullable = false, length = 80)
+	//@Column(name = "nm_produto", nullable = false, length = 80)
 	@NotNull
 	@Size(min=5, max=80)
 	private String nome;
 	
-	@Column(name = "nm_categoria", nullable = false, length = 30)
-	@NotNull
-	@Size(min=5, max=30)
+	//@Column(name = "nm_categoria", nullable = false, length = 30)
+	//@NotNull
+	//@Size(min=5, max=30)
 	private String categoria;
 	
-	@Column(name = "foto", nullable = false)
+	//@Column(name = "foto", nullable = false)
 	@NotNull
 	private String foto;
 	
-	@Column(name = "nm_descricao", nullable = false, length = 255)
+	//@Column(name = "nm_descricao", nullable = false, length = 255)
 	@NotNull
 	@Size(min=5, max=255)
 	private String descricao;
 	
-	@Column(name = "preco", nullable = false)
+	//@Column(name = "preco", nullable = false)
 	@NotNull
 	private float preco;
 	
-	@Column(name = "qtdEstoque", nullable = false)
+	//@Column(name = "qtdEstoque", nullable = false)
 	@NotNull
 	private int qtdEstoque;
 
