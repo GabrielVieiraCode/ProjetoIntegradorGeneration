@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Usuarios } from '../model/Usuarios';
+import { UsuarioLogin } from './../model/UsuarioLogin';
 
 // import { Usuarios} from '../model/Usuarios';
 
@@ -20,9 +21,9 @@ export class UsuariosService {
   cadastroUsuario(cadastro: Usuarios) {
     return this.http.post('http://localhost:8080/usuarios/cadastrar', cadastro)
   }
-  // loginUsuario(login: UsuarioLogin) {
-  //   return this.http.post('http://localhost:8080/usuarios/logar', login)
-  // }
+  logar(usuarioLogin: UsuarioLogin) {
+    return this.http.post('http://localhost:8080/usuarios/logar', usuarioLogin);
+  }
 
   editarUsuario(editar: Usuarios) {
     return this.http.put('http://localhost:8080/usuarios', editar)

@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Usuarios } from '../model/Usuarios';
 import { UsuariosService } from '../service/usuarios.service';
+import { UsuarioLogin } from '../model/UsuarioLogin';
+import { Route } from '@angular/compiler/src/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cadastro',
@@ -10,16 +13,16 @@ import { UsuariosService } from '../service/usuarios.service';
 export class CadastroComponent implements OnInit {
 
   cadastro: Usuarios = new Usuarios
-  login: Usuarios = new Usuarios
+  usuarioLogin: UsuarioLogin = new UsuarioLogin
 
   confirmaSenha: string
 
   alerta: boolean = false
 
 
-  constructor(private usuariosService: UsuariosService) { }
+  constructor(private usuariosService: UsuariosService, private router:Router) { }
 
-  ngOnInit(): void {
+  ngOnInit(){
   }
   cadastrar() {
     // valicao nome 
@@ -53,20 +56,18 @@ export class CadastroComponent implements OnInit {
   fazerLogin() {
 
     // VALIDAÇÃO CAMPO NOME LOG IN
-    if (this.login.usuario == null || this.login.usuario == "") {
+   /* if (this.login.usuario == null || this.login.usuario == "") {
       this.alerta = true
     }
     else if (this.login.senha == null || this.login.senha == "") {
       this.alerta = true
-    }
-
-    else {
-      this.usuariosService.cadastroUsuario(this.login).subscribe((resp: Usuarios) => {
-        this.login = resp
-        location.assign('/cadastro')
-
+    }*/
+      this.usuariosService.logar(this.usuarioLogin).subscribe((resp: UsuarioLogin) => {
+        this.usuarioLogin = resp
+        localStorage.setItem('token', this.usuarioLogin.token);
+        localStorage.setItem('usuario', this.usuarioLogin.usuario);
+       this.router.navigate(['/produtos']);
       })
-    }
 
   }
 
