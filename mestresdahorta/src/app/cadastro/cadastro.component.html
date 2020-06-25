@@ -1,4 +1,3 @@
-
 <div class="fundo-cadastro">
     <div class="container">
         <div class="row mt-5">
@@ -11,8 +10,8 @@
                         <div class="form-group w-75">
                             <label for="exampleInputEmail1" class="texto">Nome de usuário ou e-mail *</label>
                             <input type="email" class="form-control" id="exampleInputEmail1"
-                                aria-describedby="emailHelp" placeholder="Ex: mestredahorta@mestredahorta.com.br"
-                                [(ngModel)]="login.nome">
+                                aria-describedby="emailHelp" placeholder="Ex: mestredahorta@mestredahorta.com.br" 
+                                [(ngModel)]="usuarioLogin.usuario" >
                         </div>
                         <div class="form-group">
                             <div>
@@ -20,9 +19,9 @@
                             </div>
                             <div class="d-flex w-75 ">
                                 <input type="password" class="form-control mr-3" id="exampleInputPassword1"
-                                    placeholder="Senha" [(ngModel)]="login.senha">
+                                    placeholder="Senha" [(ngModel)]='usuarioLogin.senha'>
                                 <button type="submit" class="btn btn-entrar texto"
-                                    (click)="fazerLogin()">Entrar</button>
+                                    (click)='fazerLogin()'>Entrar</button>
                             </div>
                             <div class="alert alert-danger mt-2 w-50" *ngIf="alerta" role="alert">
                                 <span>E-mail e senha incorretos </span>
@@ -40,7 +39,7 @@
             </div>
 
 
-            
+
 
 
             <div class="col-md-6 mb-5">

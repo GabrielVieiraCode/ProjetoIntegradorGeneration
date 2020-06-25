@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Usuarios } from '../model/Usuarios';
+import { UsuarioLogin } from './../model/UsuarioLogin';
 
 // import { Usuarios} from '../model/Usuarios';
 
@@ -14,30 +15,14 @@ export class UsuariosService {
 
   // CRUD
 
-  // findAllUsuarios() {
-  //   return this.http.get('http://93.188.161.223:9000/user')
-  // }
-  // cadastroUsuario(cadastro: Usuarios) {
-  //   return this.http.post('http://93.188.161.223:9000/user', cadastro)
-  // }
-
-  // editarUsuario(editar: Usuarios) {
-  //   return this.http.put('http://93.188.161.223:9000/user', editar)
-  // }
-
-  // getByIdUsuario(id: number) {
-  //   return this.http.get(`http://93.188.161.223:9000/user/${id}`)
-  // }
-  // deleteUsuario(id:number){
-  //   return this.http.delete(`http://93.188.161.223:9000/user/${id}`)
-  // }
-
-
   findAllUsuarios() {
     return this.http.get('http://localhost:8080/usuarios');
   }
   cadastroUsuario(cadastro: Usuarios) {
-    return this.http.post('http://localhost:8080/usuarios', cadastro)
+    return this.http.post('http://localhost:8080/usuarios/cadastrar', cadastro)
+  }
+  logar(usuarioLogin: UsuarioLogin) {
+    return this.http.post('http://localhost:8080/usuarios/logar', usuarioLogin);
   }
 
   editarUsuario(editar: Usuarios) {
