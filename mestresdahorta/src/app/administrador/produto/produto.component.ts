@@ -11,7 +11,7 @@ export class ProdutoComponent implements OnInit {
 
   listaProdutos: Produtos[];
 
-  produto: Produtos = new Produtos();
+  produto: Produtos = new Produtos;
 
   alerta: boolean = false;
 
