@@ -2,6 +2,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Titan+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300&display=swap');
 
+
+/* #organizador{
+    margin-top: 180px;
+} */
+
+#label-seletor{
+    margin-top:-10px;
+}
+
 .card img{
     max-height: 128px;
 

@@ -1,5 +1,63 @@
+
+<div class="container col-8">
+    <section class=" d-flex justify-content-center flex-wrap my-3" id="organizador">
+
+        <div class=" mr-5 d-flex justify-content-between responsivo">
+
+            <div class=" mr-5 d-flex pt-3 flex-wrap filtros" action="">
+
+                <div class="form-group d-flex justify-content-center">
+                    <label class="control-label mx-5">Ordenar:</label>
+                    <div>
+
+                        <select name="txt_order mx-3" id="ordenarPor" size="1" id="label-seletor" class=" ml-3 mb-5 fFiltro form-control input-sm">
+                            <option value="preco">Preço</option>
+                            <option value="nome">Nome</option>
+                        </select>
+
+                    </div>
+                </div>
+
+                <div class="form-group d-flex justify-content-center">
+                    <label class="control-label mx-5">Ordem:</label>
+                    <div>
+
+                        <select name="txt_order" id="ordem" size="1" id="label-seletor" class=" ml-3 fFiltro form-control input-sm">
+                            <option value="desc" selected="">Decrescente</option>
+                            <option value="asc">Crescente</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <div class="form-group d-flex justify-content-center">
+                    <label class="control-label mx-5">nº de páginas:</label>
+                    <div >
+
+                        <select name="txt_order" size="1" id="quantidade" id="label-seletor" class=" ml-3 fFiltro form-control input-sm">
+                            <option value="10" selected="10">10</option>
+                            <option value="20">20</option>
+                            <option value="30">30</option>
+                            <option value="40">40</option>
+
+                        </select>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
 <div class="container">
+
+ 
     <div class="row mb-5">
+
+
+
         <!-- NOVO CARD -->
         <!-- <div class="col-8 col-md-3 col-lg-3">
             <div class="card" id="card" *ngFor="let produto of listaProdutos">
