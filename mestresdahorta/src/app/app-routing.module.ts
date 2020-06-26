@@ -4,9 +4,10 @@ import { HomeComponent } from './home/home.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { ProdutosComponent } from './produtos/produtos.component';
-import {DescricaoComponent} from './descricao/descricao.component';
+import { DescricaoComponent } from './descricao/descricao.component';
 import { FaqComponent } from './faq/faq.component';
 import { ContatoComponent } from './contato/contato.component';
+import { MeuPerfilComponent } from './meu-perfil/meu-perfil.component';
 import { AdministradorComponent } from './administrador/administrador.component';
 import { ProdutoComponent } from './administrador/produto/produto.component';
 import { ProdutoEditarComponent } from './administrador/produto-editar/produto-editar.component';
@@ -16,8 +17,6 @@ import { UsuarioEditarComponent } from './administrador/usuario-editar/usuario-e
 import { UsuarioDeletarComponent } from './administrador/usuario-deletar/usuario-deletar.component';
 /*import { EditarComponent } from './editar/editar.component';
 import { DeletarComponent } from './deletar/deletar.component';
-import { MeuperfilComponent } from './meuperfil/meuperfil.component'
-
 
 */
 const routes: Routes = [
@@ -26,10 +25,11 @@ const routes: Routes = [
   { path: 'quem-somos', component: SobreNosComponent },
   { path: 'cadastro', component: CadastroComponent },
   { path: 'produtos', component: ProdutosComponent },
-  {path: 'descricao', component: DescricaoComponent},
+  { path: 'descricao', component: DescricaoComponent },
   { path: 'faq', component: FaqComponent },
   { path: 'contato', component: ContatoComponent },
-  { path: 'administrador', component: AdministradorComponent},
+  { path: 'meu-perfil', component: MeuPerfilComponent },
+  { path: 'administrador', component: AdministradorComponent },
   { path: 'administrador/produtos', component: ProdutoComponent },
   { path: 'administrador/produtos/editar/:id', component: ProdutoEditarComponent },
   { path: 'administrador/produtos/deletar/:id', component: ProdutoDeletarComponent },
@@ -38,7 +38,6 @@ const routes: Routes = [
   { path: 'administrador/usuarios/deletar/:id', component: UsuarioDeletarComponent }
   /*{ path: 'editar/:id', component: EditarComponent },
   { path: 'deletar/:id', component: DeletarComponent },
-  { path: 'meuperfil', component: MeuperfilComponent },
   */
 ];
 

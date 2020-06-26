@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
+import { faShoppingBasket } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-meu-perfil',
@@ -6,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./meu-perfil.component.css']
 })
 export class MeuPerfilComponent implements OnInit {
+
+  faUsuario = faUser;
+  faCarrinho = faShoppingBasket;
 
   constructor() { }
 
