@@ -23,22 +23,24 @@
                     <input class="form-input form-control shadow-none" type="search" placeholder="Procurando algo?"
                         aria-label="Search">
 
-                    <button class="form-button btn bg-dark shadow-none " type="button">
-                        <fa-icon [icon]="faPesquisar" class="faPesquisar fa-1x text-light "></fa-icon>
+                    <button class="form-button btn bg-dark shadow-none" id="simbolo-pesquisar" type="button">
+                        <fa-icon [icon]="faPesquisar" class="faPesquisar fa-1x text-light"></fa-icon>
                     </button>
                 </form>
             </div> <!-- menu-pesquisar -->
 
             <div class="menu-icones d-flex justify-content-center align-items-center  w-25">
                 <div class="icones-perfil  w-50 mr-2">
-                    <button type="button" class="btn-perfil btn bg-transparent shadow-none w-100">
+                    <button type="button" class="btn-perfil btn bg-transparent shadow-none w-100"
+                        routerLink='/meu-perfil'>
                         <fa-icon [icon]="faUsuario" class="faUsuario fa-1x text-dark"></fa-icon>
                         <span class="span-perfil"> Perfil </span>
                     </button>
                 </div>
 
                 <div class="icones-carrinho w-50 ">
-                    <button type="button" class="btn-carrinho btn bg-transparent shadow-none w-100">
+                    <button type="button" class="btn-carrinho btn bg-transparent shadow-none w-100"
+                        routerLink='/meu-perfil'>
                         <fa-icon [icon]="faCarrinho" class="faCarrinho fa-1x text-dark"></fa-icon>
                     </button>
                 </div>

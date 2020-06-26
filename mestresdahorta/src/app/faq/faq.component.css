@@ -1,12 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chango&family=Fredoka+One&family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300&display=swap');
+
 button{
+    font-family: 'Fredoka One', cursive;  
     cursor: pointer;
-    color: green;
+    color:#575151;
     margin-bottom: 12px;
     height: 50px;
 }
+
 p{
+    font-family: 'Oxygen', sans-serif;
     cursor: pointer;
-    color: green;
+    color:  black;
 }
 
 
