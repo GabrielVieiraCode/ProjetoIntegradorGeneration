@@ -3,6 +3,10 @@ package com.mestredahorta.ecomerce.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort.Direction;
+import org.springframework.data.web.PageableDefault;
 //import org.springframework.cache.annotation.Cacheable;
 //import org.springframework.data.domain.Page;
 //import org.springframework.data.domain.Pageable;
@@ -33,8 +37,8 @@ public class ProdutoController {
 	
 	
 	@GetMapping
-	public ResponseEntity<List<produto>> Getall(){
-		return ResponseEntity.ok(repository.findAll());
+	public ResponseEntity<Page<produto>> Getall(@PageableDefault(direction = Direction.DESC,page = 0,size = 10, sort = "nome") Pageable pageable){
+		return ResponseEntity.ok(repository.findAll(pageable));
 	}
 	
 	
@@ -54,8 +58,8 @@ public class ProdutoController {
 	
 	
 	@GetMapping("/nome/{nome}")
-	public ResponseEntity<List<produto>> GetByNome(@PathVariable String nome){
-		return ResponseEntity.ok(repository.findAllByNomeContainingIgnoreCase(nome));				
+	public ResponseEntity<Page<produto>> GetByNome(@PathVariable String nome, Pageable pageable){
+		return ResponseEntity.ok(repository.findAllByNomeContainingIgnoreCase(nome, pageable));				
 	}
 	
 	
