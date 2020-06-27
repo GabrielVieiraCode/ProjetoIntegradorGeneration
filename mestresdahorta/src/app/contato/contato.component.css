@@ -3,10 +3,21 @@
 }
 
 
-
+body{
+    width: 100%;
+}
 label {
     font-size: 18pt;
     font-weight: lighter;
+}
+p{
+    font-family: 'Oxygen', sans-serif; 
+}
+button{
+    color: #575151;
+    /* color: black; */
+    background: #C8F2C8;
+    border: 1px solid #5D5D5D;
 }
 
 .container{
