@@ -10,7 +10,7 @@
     <div class="row ">
         <div class="col ">
             <div class="form-group">
-                <label for="exampleFormControlInput1">Nome:</label>
+                <label id="label" for="exampleFormControlInput1">Nome:</label>
                 <input type="text" class="form-control" id="nome" placeholder="Digite aqui o nome"
                     [(ngModel)]="produto.nome">
             </div>
@@ -63,7 +63,7 @@
                 </div>
                 <div> <span>Descrição: {{produto.descricao}}</span> </div>
                 <div>
-                    <span>Preço: {{produto.preco}},00 R$</span>
+                    <span>Preço:&nbsp;R$&nbsp;{{produto.preco}},00</span>
                 </div>
                 <div>
                     <span>Quantidade: {{produto.qtdEstoque}}</span>

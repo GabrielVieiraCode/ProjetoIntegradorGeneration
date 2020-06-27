@@ -1,22 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300&display=swap');
+
+
+.card img{
+    max-height: 128px;
+
+}
+
 .container{
-    margin-top: 160px;
-  }
-  
-  .text-titulo{
-    font-family: 'Fredoka One', cursive;
-    color: #575151;
-    font-weight: lighter;   
-  }
-  .text-geral{
-    font-family: 'Oxygen', sans-serif;
-    color: #575151;
-    font-weight: lighter;
-  }
-  
-  
-  @media screen and (max-width:1000px) {
-      .container{
-          margin-top:60px;
-    }
-  }
-  
+    
+    margin: -200px auto 100px auto;
+    font-family: 'Oxygen', sans-serif;  
+    letter-spacing: 2px;
+    font-weight: lighter
+}
+
+
+
+
+
+.card-title {
+    font-family:'Fredoka One', cursive;
+    letter-spacing: 2px;
+    letter-spacing: 2px;
+}
+
+.card{
+    /* width: 12em; */
+    box-shadow: 2px 2px 3px #dddddd;
+    border-radius: 5px;
+    margin-top:50px;
+
+}
+
+
+
+

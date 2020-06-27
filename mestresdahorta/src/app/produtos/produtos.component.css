@@ -3,21 +3,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300&display=swap');
 
 
-/* #organizador{
+#organizador{
     margin-top: 180px;
-} */
+}
 
-#label-seletor{
-    margin-top:-10px;
+#filtro select{
+    height:40px;
+    min-width: 100px;;
+}
+
+#quantidade{
+    min-width: 60px!important;
+}
+
+#campo-pesquisa{
+width: 100px;
+left: 50px;
+}
+
+#btn-pesquisa{
+    position: relative;
+    left:70px;
+    top:-6px;
 }
 
 .card img{
     max-height: 128px;
 
 }
+
+
 .container{
     
-    margin: 180px auto 100px auto;
+    margin: 30px auto 100px auto;
     font-family: 'Gloria Hallelujah', cursive;
     letter-spacing: 2px;
     font-weight: bolder;
@@ -367,6 +385,47 @@ body {
 
 @media screen and (min-width:360px) and (max-width:374px){
 
+    #div-filtro-organizar{
+        position: relative;
+        left:20px;
+    }
+    #div-filtro-organizar label{
+        position: relative;
+        left:50px;
+    }
+
+
+    #div-filtro-ordem{
+        padding-top: 0px;
+        margin-top: -100px!important;
+        position: relative;
+        left:20px;
+    }
+    
+    #div-filtro-ordem label{
+        position: relative;
+        left:45px;
+    }
+
+
+    #div-filtro-pag{
+        padding-top: 0px;
+        margin-top: -145px!important;
+        margin-left:-10px;
+        text-align: center;
+    }
+    
+    #div-filtro-pag label {
+        left:39px;
+        position: relative;
+    }
+    
+    #filtro-select-pag{
+        position:relative;
+        left:35px;
+        width:100px!important;
+    }
+    
     #card img{
 		max-height: 128px;
 	}
@@ -438,6 +497,32 @@ body {
 }
 
 @media screen and (min-width:300px) and (max-width:319px){
+    
+    #div-filtro-ordem{
+        padding-top: 0px;
+        margin-top: -100px!important;
+        margin-left:-10px;
+    }
+    
+    #div-filtro-pag{
+        padding-top: 0px;
+        margin-top: -145px!important;
+        margin-left:-10px;
+        text-align: center;
+    }
+    
+    #div-filtro-pag label {
+        left:20px;
+        position: relative;
+    }
+    
+    #filtro-select-pag{
+        position:relative;
+        left:18px;
+        width:100px!important;
+    }
+    
+    
     .container{
         margin-top:60px;
     }
