@@ -31,7 +31,7 @@ export class ProdutoComponent implements OnInit {
 
   pagina: number = 0;
 
-  private quantidade: number = 12;
+  private quantidade: number = 60;
 
   numeroDePaginas:number;
 
@@ -42,7 +42,8 @@ export class ProdutoComponent implements OnInit {
 
   ordenar:string = "nome";
   direcao: string = "asc";
-  quantidadePorPagina:string;
+  quantidadePorPagina:number = 60;
+  
 
 
   constructor(private produtosService: ProdutosService) { }
@@ -83,8 +84,9 @@ export class ProdutoComponent implements OnInit {
   }
 
   findAllProdutos(pagina, quantidade, ordenar, direcao) {
-    this.produtosService.findAllProdutos(pagina, quantidade, ordenar, direcao).subscribe((resp: Produtos[]) => {
-      this.listaProdutos = resp;
+    this.produtosService.findAllProdutos(pagina, quantidade, ordenar, direcao).subscribe((resp: Conteudo) => {
+      this.conteudo = resp;
+      this.listaProdutos = this.conteudo.content;
     })
   }
 
