@@ -23,6 +23,7 @@ import { UsuarioComponent } from './administrador/usuario/usuario.component';
 import { UsuarioEditarComponent } from './administrador/usuario-editar/usuario-editar.component';
 import { UsuarioDeletarComponent } from './administrador/usuario-deletar/usuario-deletar.component';
 import { MeuPerfilComponent } from './meu-perfil/meu-perfil.component';
+import { MensagensComponent } from './administrador/mensagens/mensagens.component';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { MeuPerfilComponent } from './meu-perfil/meu-perfil.component';
     UsuarioComponent,
     UsuarioEditarComponent,
     UsuarioDeletarComponent,
-    MeuPerfilComponent
+    MeuPerfilComponent,
+    MensagensComponent
   ],
   imports: [
     BrowserModule,
