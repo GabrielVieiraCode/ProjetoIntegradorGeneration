@@ -15,6 +15,18 @@ export class MeuPerfilComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    let aux = localStorage.getItem("id");
+    this.scroll(aux);
+  }
+
+  scroll(param): void {
+    if (param == "cesta") {
+      window.scroll(0, 1100)
+    }
+    else {
+      window.scroll(0, 0)
+    }
+    localStorage.removeItem("id")
   }
 
 }

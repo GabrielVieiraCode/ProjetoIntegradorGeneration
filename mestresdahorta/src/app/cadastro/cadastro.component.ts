@@ -20,9 +20,9 @@ export class CadastroComponent implements OnInit {
   alerta: boolean = false
 
 
-  constructor(private usuariosService: UsuariosService, private router:Router) { }
+  constructor(private usuariosService: UsuariosService, private router: Router) { }
 
-  ngOnInit(){
+  ngOnInit() {
   }
   cadastrar() {
     // valicao nome 
@@ -54,23 +54,28 @@ export class CadastroComponent implements OnInit {
   }
 
   fazerLogin() {
+    this.alerta = false;
 
     // VALIDAÇÃO CAMPO NOME LOG IN
-   /* if (this.login.usuario == null || this.login.usuario == "") {
-      this.alerta = true
-    }
-    else if (this.login.senha == null || this.login.senha == "") {
-      this.alerta = true
-    }*/
-      this.usuariosService.logar(this.usuarioLogin).subscribe((resp: UsuarioLogin) => {
-        this.usuarioLogin = resp
-        localStorage.setItem('token', this.usuarioLogin.token);
-        localStorage.setItem('usuario', this.usuarioLogin.usuario);
-       this.router.navigate(['/produtos']);
-      })
-
+    /* if (this.login.usuario == null || this.login.usuario == "") {
+       this.alerta = true
+     }
+     else if (this.login.senha == null || this.login.senha == "") {
+       this.alerta = true
+     }*/
+    this.usuariosService.logar(this.usuarioLogin).subscribe((resp: UsuarioLogin) => {
+      this.usuarioLogin = resp
+      localStorage.setItem('token', this.usuarioLogin.token);
+      localStorage.setItem('usuario', this.usuarioLogin.usuario);
+      this.router.navigate(['/produtos']);
+    }, err => {
+      this.alerta = true;
+    })
   }
 
-  validaCampos() { }
+  validaCampos() {
+
+
+  }
 
 }

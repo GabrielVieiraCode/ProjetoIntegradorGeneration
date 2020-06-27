@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { faShoppingBasket } from '@fortawesome/free-solid-svg-icons';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -16,9 +17,14 @@ export class NavbarComponent implements OnInit {
   faCarrinho = faShoppingBasket;
   faUsuario = faUser;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  teste(nome: string) {
+    localStorage.setItem("id", nome);
+    this.router.navigate(['/meu-perfil'])
   }
 
 }
