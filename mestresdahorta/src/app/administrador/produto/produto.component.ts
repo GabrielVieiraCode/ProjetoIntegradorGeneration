@@ -20,6 +20,8 @@ export class ProdutoComponent implements OnInit {
   ngOnInit(): void {
     this.findAllProdutos();
 
+    window.scroll(0, 0)
+
     let item: string = localStorage.getItem('delOk');
 
     if (item == 'true') {

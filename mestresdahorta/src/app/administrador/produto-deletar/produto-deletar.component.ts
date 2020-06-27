@@ -18,6 +18,9 @@ export class ProdutoDeletarComponent implements OnInit {
   ngOnInit(): void {
     let id: number = this.route.snapshot.params['id']
     this.findById(id)
+    window.scroll(0, 0)
+
+
 
   }
 

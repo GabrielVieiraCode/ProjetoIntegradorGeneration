@@ -15,15 +15,17 @@ export class ProdutosComponent implements OnInit {
 
   ngOnInit(): void {
     this.findAllProdutos();
-    
-}
+
+    window.scroll(0, 0)
+
+  }
 
 
-findAllProdutos() {
-  this.produtosService.findAllProdutos().subscribe((resp: Produtos[]) => {
-    this.listaProdutos = resp;
-  })
-}
+  findAllProdutos() {
+    this.produtosService.findAllProdutos().subscribe((resp: Produtos[]) => {
+      this.listaProdutos = resp;
+    })
+  }
 }
 
 

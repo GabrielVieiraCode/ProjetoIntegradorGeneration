@@ -15,40 +15,48 @@ export class CadastroComponent implements OnInit {
   cadastro: Usuarios = new Usuarios
   usuarioLogin: UsuarioLogin = new UsuarioLogin
 
+  senha: string
   confirmaSenha: string
 
   alerta: boolean = false
+  alertaConfirma: boolean = false
 
 
-  constructor(private usuariosService: UsuariosService, private router:Router) { }
+  constructor(private usuariosService: UsuariosService, private router: Router) { }
 
-  ngOnInit(){
+  ngOnInit() {
+
+    window.scroll(0, 0)
+
   }
   cadastrar() {
-    // valicao nome 
-    if (this.cadastro.nome == null || this.cadastro.nome == "") {
-      // this.alertanome = true
-    }
-    // validacao email
-    else if (this.cadastro.email == null || this.cadastro.email == "") {
-      // this.alertaemail = true
-    }
-    // validacao senha 
-    else if (this.cadastro.senha == null || this.cadastro.senha == "") {
-      // this.alertasenha = true
-    }
-    // validacao confirma senha
-    else if (this.cadastro.senha !== this.confirmaSenha) {
-      // this.alertaconfirmasenha = true
-    }
+    // // valicao nome 
+    // if (this.cadastro.nome == null || this.cadastro.nome == "") {
+    //   // this.alertanome = true
+    // }
+    // // validacao email
+    // else if (this.cadastro.email == null || this.cadastro.email == "") {
+    //   // this.alertaemail = true
+    // }
+    // // validacao senha 
+    // else if (this.cadastro.senha == null || this.cadastro.senha == "") {
+    //   // this.alertasenha = true
+    // }
+    // // validacao confirma senha
+    // else if (this.cadastro.senha !== this.confirmaSenha) {
+    //   // this.alertaconfirmasenha = true
+    // }
 
 
-    else {
+    // else {
+
+    if (this.cadastro.senha === this.confirmaSenha) {
       this.usuariosService.cadastroUsuario(this.cadastro).subscribe((resp: Usuarios) => {
-        this.cadastro = resp
-        location.assign('/cadastro')
-
-      })
+        this.cadastro = resp;
+        this.alertaConfirma;
+        // location.assign('/cadastro')
+        this.router.navigate(['/home']);
+      });
     }
 
   }
@@ -56,18 +64,18 @@ export class CadastroComponent implements OnInit {
   fazerLogin() {
 
     // VALIDAÇÃO CAMPO NOME LOG IN
-   /* if (this.login.usuario == null || this.login.usuario == "") {
-      this.alerta = true
-    }
-    else if (this.login.senha == null || this.login.senha == "") {
-      this.alerta = true
-    }*/
-      this.usuariosService.logar(this.usuarioLogin).subscribe((resp: UsuarioLogin) => {
-        this.usuarioLogin = resp
-        localStorage.setItem('token', this.usuarioLogin.token);
-        localStorage.setItem('usuario', this.usuarioLogin.usuario);
-       this.router.navigate(['/produtos']);
-      })
+    /* if (this.login.usuario == null || this.login.usuario == "") {
+       this.alerta = true
+     }
+     else if (this.login.senha == null || this.login.senha == "") {
+       this.alerta = true
+     }*/
+    this.usuariosService.logar(this.usuarioLogin).subscribe((resp: UsuarioLogin) => {
+      this.usuarioLogin = resp
+      localStorage.setItem('token', this.usuarioLogin.token);
+      localStorage.setItem('usuario', this.usuarioLogin.usuario);
+      this.router.navigate(['/produtos']);
+    })
 
   }
 
