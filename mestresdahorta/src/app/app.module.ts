@@ -24,6 +24,7 @@ import { UsuarioEditarComponent } from './administrador/usuario-editar/usuario-e
 import { UsuarioDeletarComponent } from './administrador/usuario-deletar/usuario-deletar.component';
 import { MeuPerfilComponent } from './meu-perfil/meu-perfil.component';
 import { MensagensComponent } from './administrador/mensagens/mensagens.component';
+import { MensagensDeleteComponent } from './administrador/mensagens-delete/mensagens-delete.component';
 
 
 @NgModule({
@@ -46,7 +47,8 @@ import { MensagensComponent } from './administrador/mensagens/mensagens.componen
     UsuarioEditarComponent,
     UsuarioDeletarComponent,
     MeuPerfilComponent,
-    MensagensComponent
+    MensagensComponent,
+    MensagensDeleteComponent
   ],
   imports: [
     BrowserModule,

@@ -6,27 +6,31 @@
       <button class="btn btn-outline-dark w-50" [routerLink]="['/administrador/mensagens']">Mensagens</button>
     </div>
     <p class="display-4 text-center text-titulo">Mensagens dos usuarios</p>
-    <div class="card" *ngFor ="let contatos of  listaContatos">
+    <div class="card" >
         <div class="card-header">
-            {{contatos.id}}
+            {{contato.id}}
         </div>
          <div class="card-header">
-            {{contatos.nome}}
+            {{contato.nome}}
         </div>
         <div class="card-header">
-            {{contatos.email}}
+            {{contato.email}}
         </div>
         <div class="card-header">
-            {{contatos.telefone}}
+            {{contato.telefone}}
         </div>
         <div class="card-body">
-            {{contatos.mensagem}}
+            {{contato.mensagem}}
         </div>
-        <button type="button" class="btn  btn-danger"
-        [routerLink]="['/administrador/mensagens/deletar', contatos.id]">Apagar</button>
+      
+         
     </div>
-    
-  
+    <h5 class="display-6 text-titulo">Tem certeza?</h5>
+    <div>
+        <button class="btn btn-outline-danger mr-3 " (click)="btnSim()">Sim</button>
+        <button class="btn btn-outline-success" (click)="btnNao()">Nao</button>
+    </div> <!-- botoes -->
+
   </div>
   
 
