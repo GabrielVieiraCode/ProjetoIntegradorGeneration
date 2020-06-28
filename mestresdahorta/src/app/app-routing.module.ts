@@ -26,7 +26,7 @@ const routes: Routes = [
   { path: 'quem-somos', component: SobreNosComponent },
   { path: 'cadastro', component: CadastroComponent },
   { path: 'produtos', component: ProdutosComponent },
-  {path: 'descricao', component: DescricaoComponent},
+  {path: 'descricao/:id', component: DescricaoComponent},
   { path: 'faq', component: FaqComponent },
   { path: 'contato', component: ContatoComponent },
   { path: 'administrador', component: AdministradorComponent},

@@ -36,9 +36,9 @@ export class ProdutosComponent implements OnInit {
 
 
       // ao iniciar seta as variaveis com os valores do filtro
-      this.ordenar = (<HTMLInputElement>document.getElementById("ordenarPor")).value;
-      this.direcao = (<HTMLInputElement>document.getElementById("ordem")).value;
-      this.quantidade = parseInt((<HTMLInputElement>document.getElementById("quantidade")).value);
+      this.ordenar = (<HTMLInputElement>document.getElementById("filtrar-por-select")).value;
+      this.direcao = (<HTMLInputElement>document.getElementById("ordem-select")).value;
+      this.quantidade = parseInt((<HTMLInputElement>document.getElementById("npag-select")).value);
   
     }
   
@@ -60,6 +60,7 @@ export class ProdutosComponent implements OnInit {
     //     this.verificarNumeroDePaginas()
     //   })
     // }
+    
     findAllProdutosByName(nome,pagina, quantidade, ordenacao, direcao ) {
       this.produtosService.findAllProdutosByName(nome,pagina,quantidade,ordenacao,direcao).subscribe((resp: Conteudo)=> {
         this.conteudo = resp;
@@ -119,9 +120,9 @@ export class ProdutosComponent implements OnInit {
     }
   
     filtrarProdutos () {
-      this.ordenar = (<HTMLInputElement>document.getElementById("ordenarPor")).value;
-      this.direcao = (<HTMLInputElement>document.getElementById("ordem")).value;
-      this.quantidade = parseInt((<HTMLInputElement>document.getElementById("quantidade")).value);
+      this.ordenar = (<HTMLInputElement>document.getElementById("filtrar-por-select")).value;
+      this.direcao = (<HTMLInputElement>document.getElementById("ordem-select")).value;
+      this.quantidade = parseInt((<HTMLInputElement>document.getElementById("npag-select")).value);
       this.findAllProdutos(this.pagina, this.quantidade, this.ordenar, this.direcao);
       this.verificarNumeroDePaginas()
     } 
