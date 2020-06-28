@@ -1,0 +1,29 @@
+<div class="container text-geral">
+
+    <div class="w-100 mb-5">
+        <h2 class=" text-center text-titulo mb-3">Administrador</h2>
+        <button class="btn btn-outline-dark w-50  mb-2" [routerLink]="['/administrador/usuarios']">Usuarios</button>
+        <button class="btn btn-outline-dark w-50 mb-2" [routerLink]="['/administrador/produtos']">Produtos</button>
+        <button class="btn btn-outline-dark active  w-50" [routerLink]="['/administrador/mensagens']">Mensagens</button>
+    </div>
+    <p class="display-4 text-center text-titulo">Mensagens dos usuarios</p>
+    <div class="card" *ngFor="let contatos of  listaContatos">
+        <div class="card-header">
+            {{contatos.id}}
+        </div>
+        <div class="card-header">
+            {{contatos.nome}}
+        </div>
+        <div class="card-header">
+            {{contatos.email}}
+        </div>
+        <div class="card-header">
+            {{contatos.telefone}}
+        </div>
+        <div class="card-body">
+            {{contatos.mensagem}}
+        </div>
+    </div>
+
+
+</div>

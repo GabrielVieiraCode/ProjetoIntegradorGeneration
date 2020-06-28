@@ -106,8 +106,8 @@ span, button {
 
 
   @media screen and (max-width: 358px){
-    .container{
-        margin-top: -3em;
-    }
+    /* .container{
+        margin-top: em;
+    } */
 
   }

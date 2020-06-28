@@ -32,7 +32,7 @@
             <div class="menu-icones d-flex justify-content-center align-items-center  w-25">
                 <div class="icones-perfil  w-50 mr-2">
                     <button type="button" class="btn-perfil btn bg-transparent shadow-none w-100"
-                        routerLink='/meu-perfil'>
+                        routerLink='/meu-perfil' *ngIf="btnSair()">
                         <fa-icon [icon]="faUsuario" class="faUsuario fa-1x text-dark"></fa-icon>
                         <span class="span-perfil"> Perfil </span>
                     </button>
@@ -40,7 +40,7 @@
 
                 <div class="icones-carrinho w-50 ">
                     <button type="button" class="btn-carrinho btn bg-transparent shadow-none w-100"
-                        routerLink='/meu-perfil'>
+                        (click)="teste('cesta')" *ngIf="btnSair()">
                         <fa-icon [icon]="faCarrinho" class="faCarrinho fa-1x text-dark"></fa-icon>
                     </button>
                 </div>
@@ -55,7 +55,7 @@
                 <ul class="navbar-nav mx-auto ">
                     <li class="nav-item pr-4 pl-4">
                         <a class="nav-link text-titulo text-uppercase" routerLink='/home'>
-                            Inicio<span class="sr-only">(página atual)</span></a>
+                            Início<span class="sr-only">(página atual)</span></a>
                     </li>
                     <li class="nav-item pr-4 pl-4 ">
                         <a class="nav-link text-titulo text-uppercase" routerLink='/quem-somos'>QUEM

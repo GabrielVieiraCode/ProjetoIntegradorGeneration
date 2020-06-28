@@ -1,18 +1,21 @@
-<div class="container text-titulo">
+<div class="container text-geral">
 
-    <div class="w-100 ">
-        <p class=" text-center text-titulo">Administrador</p>
-        <button class="btn btn-outline-dark w-50 active" [routerLink]="['/administrador/usuarios']">Usuarios</button>
-        <button class="btn btn-outline-dark w-50" [routerLink]="['/administrador/produtos']">Produtos</button>
+    <div class="w-100 mb-5">
+        <h2 class=" text-center text-titulo mb-3">Administrador</h2>
+        <button class="btn btn-outline-dark w-50 active mb-2"
+            [routerLink]="['/administrador/usuarios']">Usuarios</button>
+        <button class="btn btn-outline-dark w-50 mb-2" [routerLink]="['/administrador/produtos']">Produtos</button>
+        <button class="btn btn-outline-dark w-50" [routerLink]="['/administrador/mensagens']">Mensagens</button>
+
     </div>
 
     <p class="display-4 text-center text-titulo">Tabela de Usuários</p>
     <table class="table table-hover table-responsive-md">
         <thead>
-            <tr class="text-titulo bg-secondary text-light">
+            <tr class="text-geral bg-secondary text-light">
                 <th scope="col">ID</th>
                 <th scope="col">Nome</th>
-                <th scope="col">Email</th>
+                <th scope="col">E-mail</th>
                 <!-- <th scope="col">Senha</th> -->
                 <th scope="col">Ações</th>
 

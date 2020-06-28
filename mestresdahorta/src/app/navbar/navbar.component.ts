@@ -17,9 +17,7 @@ export class NavbarComponent implements OnInit {
   faCarrinho = faShoppingBasket;
   faUsuario = faUser;
 
-  constructor(
-    private router: Router
-  ) { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -47,6 +45,12 @@ export class NavbarComponent implements OnInit {
       ok = true;
     }
     return ok;
+  }
+
+
+  teste(nome: string) {
+    localStorage.setItem("id", nome);
+    this.router.navigate(['/meu-perfil'])
   }
 
 }

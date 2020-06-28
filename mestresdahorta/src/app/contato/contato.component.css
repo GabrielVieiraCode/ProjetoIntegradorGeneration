@@ -1,3 +1,6 @@
+ .fundo{
+     background: #F9FBF9;
+ }
 iframe{
     margin-top: 45px;
     width:480px;
@@ -10,6 +13,7 @@ h1{
 
 body{
     width: 100%;
+    background: #F9FBF9 ;
 }
 label {
     font-size: 18pt;
@@ -24,6 +28,11 @@ button{
     background: #C8F2C8;
     border: 1px solid #5D5D5D;
 }
+
+button:hover{
+    color: darkgreen;
+}
+
 
 .container{
     margin-top: 190px;

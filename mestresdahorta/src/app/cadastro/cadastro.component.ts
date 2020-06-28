@@ -29,27 +29,8 @@ export class CadastroComponent implements OnInit {
     window.scroll(0, 0)
 
   }
+
   cadastrar() {
-    // // valicao nome 
-    // if (this.cadastro.nome == null || this.cadastro.nome == "") {
-    //   // this.alertanome = true
-    // }
-    // // validacao email
-    // else if (this.cadastro.email == null || this.cadastro.email == "") {
-    //   // this.alertaemail = true
-    // }
-    // // validacao senha 
-    // else if (this.cadastro.senha == null || this.cadastro.senha == "") {
-    //   // this.alertasenha = true
-    // }
-    // // validacao confirma senha
-    // else if (this.cadastro.senha !== this.confirmaSenha) {
-    //   // this.alertaconfirmasenha = true
-    // }
-
-
-    // else {
-
     if (this.cadastro.senha === this.confirmaSenha) {
       this.usuariosService.cadastroUsuario(this.cadastro).subscribe((resp: Usuarios) => {
         this.cadastro = resp;
@@ -62,24 +43,18 @@ export class CadastroComponent implements OnInit {
   }
 
   fazerLogin() {
+    this.alerta = false;
 
-    // VALIDAÇÃO CAMPO NOME LOG IN
-    /* if (this.login.usuario == null || this.login.usuario == "") {
-       this.alerta = true
-     }
-     else if (this.login.senha == null || this.login.senha == "") {
-       this.alerta = true
-     }*/
     this.usuariosService.logar(this.usuarioLogin).subscribe((resp: UsuarioLogin) => {
       this.usuarioLogin = resp
       localStorage.setItem('token', this.usuarioLogin.token);
       localStorage.setItem('nome', this.usuarioLogin.nome);
       localStorage.setItem('usuario', this.usuarioLogin.usuario);
       this.router.navigate(['/produtos']);
+    }, err => {
+      this.alerta = true;
     })
-
   }
 
-  validaCampos() { }
 
 }
