@@ -10,6 +10,7 @@ import { Contato } from 'src/app/model/Contato';
 export class MensagensComponent implements OnInit {
 
     listaContatos : Contato[]
+    contato:Contato = new Contato
 
   constructor( private contatoService:ContatoService) { }
 

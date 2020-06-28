@@ -23,7 +23,8 @@
         <div class="card-body">
             {{contatos.mensagem}}
         </div>
+        <button type="button" class="btn  btn-danger"
+            [routerLink]="['/administrador/mensagens/deletar', contatos.id]">Apagar</button>
     </div>
-
 
 </div>

@@ -11,5 +11,13 @@ export class ContatoService {
   getAllContato(){
     return this.http.get('http://localhost:8080/contato')
   }
+  getByIdContato(id: number) {
+    return this.http.get(`http://localhost:8080/contato/${id}`);
+  }
+
+  deleteContato(id: number) {
+    return this.http.delete(`http://localhost:8080/contato/${id}`);
+
+  }
   
 }

@@ -16,6 +16,7 @@ import { UsuarioComponent } from './administrador/usuario/usuario.component';
 import { UsuarioEditarComponent } from './administrador/usuario-editar/usuario-editar.component';
 import { UsuarioDeletarComponent } from './administrador/usuario-deletar/usuario-deletar.component';
 import { MensagensComponent } from './administrador/mensagens/mensagens.component';
+import { MensagensDeleteComponent } from './administrador/mensagens-delete/mensagens-delete.component';
 /*import { EditarComponent } from './editar/editar.component';
 import { DeletarComponent } from './deletar/deletar.component';
 
@@ -37,7 +38,8 @@ const routes: Routes = [
   { path: 'administrador/usuarios', component: UsuarioComponent },
   { path: 'administrador/usuarios/editar/:id', component: UsuarioEditarComponent },
   { path: 'administrador/usuarios/deletar/:id', component: UsuarioDeletarComponent },
-  {path: 'administrador/mensagens',component:MensagensComponent}
+  {path: 'administrador/mensagens',component:MensagensComponent},
+  {path: 'administrador/mensagens/deletar/:id',component:MensagensDeleteComponent}
   /*{ path: 'editar/:id', component: EditarComponent },
   { path: 'deletar/:id', component: DeletarComponent },
   */

@@ -1,6 +1,7 @@
 package com.mestredahorta.ecomerce.controller;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -14,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.mestredahorta.ecomerce.model.Mensagens;
-
+import com.mestredahorta.ecomerce.model.Usuario;
 import com.mestredahorta.ecomerce.repository.MensagemRepository;
 
 
@@ -38,5 +39,13 @@ public class MensagensController {
 	@PostMapping
 	public ResponseEntity<Mensagens> Post(@RequestBody Mensagens mensagem){
 		return ResponseEntity.ok(repository.save(mensagem));
+	}
+	@GetMapping("/{id}")
+	public ResponseEntity<Mensagens> getById (@PathVariable Long id) {
+		 Optional<Mensagens> mensagem = repository.findById(id);
+		 if(mensagem.isPresent()) {
+			 return ResponseEntity.ok(mensagem.get());
+		 }
+		 return ResponseEntity.notFound().build();
 	}
 }
