@@ -73,6 +73,7 @@ export class CadastroComponent implements OnInit {
     this.usuariosService.logar(this.usuarioLogin).subscribe((resp: UsuarioLogin) => {
       this.usuarioLogin = resp
       localStorage.setItem('token', this.usuarioLogin.token);
+      localStorage.setItem('nome', this.usuarioLogin.nome);
       localStorage.setItem('usuario', this.usuarioLogin.usuario);
       this.router.navigate(['/produtos']);
     })

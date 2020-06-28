@@ -1,4 +1,8 @@
 /* Configurações gerais */
+
+a{
+    cursor: pointer;
+}
 .text-titulo{
     font-family: 'Fredoka One', cursive;
     color: #575151;

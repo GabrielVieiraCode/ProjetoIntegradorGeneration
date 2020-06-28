@@ -64,9 +64,16 @@
                     <li class="nav-item pr-4 pl-4 ">
                         <a class="nav-link text-titulo text-uppercase" routerLink='/produtos'>PRODUTOS</a>
                     </li>
-                    <li class="nav-item  pr-4 pl-4">
-                        <a class="nav-link text-titulo text-uppercase" routerLink='/cadastro'>CADASTRO</a>
-                    </li>
+                    <div *ngIf="btnCadastro()">
+                        <li class="nav-item  pr-4 pl-4">
+                            <a class="nav-link text-titulo text-uppercase" routerLink='/cadastro'>CADASTRO</a>
+                        </li>
+                    </div>
+                    <div *ngIf="btnSair()">
+                        <li class="nav-item  pr-4 pl-4">
+                            <a class="nav-link text-titulo text-uppercase" (click)="sair()">SAIR</a>
+                        </li>
+                    </div>
                     <li class="nav-item pr-4 pl-4 ">
                         <a class="nav-link text-titulo text-uppercase" routerLink='/contato'>CONTATO</a>
                     </li>
