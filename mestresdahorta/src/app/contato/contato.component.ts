@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import{faInstagram} from '@fortawesome/free-brands-svg-icons';
-import {faUser} from '@fortawesome/free-regular-svg-icons';
-import {faEnvelope} from '@fortawesome/free-regular-svg-icons';
-import {faPhone} from '@fortawesome/free-solid-svg-icons';
+import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faUser } from '@fortawesome/free-regular-svg-icons';
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
+import { faPhone } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-contato',
@@ -11,12 +11,15 @@ import {faPhone} from '@fortawesome/free-solid-svg-icons';
 })
 export class ContatoComponent implements OnInit {
   faInstagram = faInstagram
-faUser = faUser
-faEnvelope = faEnvelope
-faPhone =faPhone
+  faUser = faUser
+  faEnvelope = faEnvelope
+  faPhone = faPhone
   constructor() { }
 
   ngOnInit(): void {
+
+    window.scroll(0, 0)
+
   }
 
 }

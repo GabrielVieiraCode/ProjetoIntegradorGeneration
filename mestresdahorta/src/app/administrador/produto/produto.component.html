@@ -1,9 +1,12 @@
-<div class="container text-geral">
+<div class="container text-geral mb-5">
 
-    <div class="w-100 ">
-        <p class=" text-center text-titulo">Administrador</p>
-        <button class="btn btn-outline-dark w-50 " [routerLink]="['/administrador/usuarios']">Usuarios</button>
-        <button class="btn btn-outline-dark w-50 active" [routerLink]="['/administrador/produtos']">Produtos</button>
+    <div class="w-100 mb-5">
+        <h2 class=" text-center text-titulo mb-3">Administrador</h2>
+        <button class="btn btn-outline-dark w-50  mb-2" [routerLink]="['/administrador/usuarios']">Usuarios</button>
+        <button class="btn btn-outline-dark active w-50 mb-2"
+            [routerLink]="['/administrador/produtos']">Produtos</button>
+        <button class="btn btn-outline-dark w-50" [routerLink]="['/administrador/mensagens']">Mensagens</button>
+
     </div>
     <p class="display-4 text-center text-titulo">Cadastre um produto</p>
 

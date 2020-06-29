@@ -21,7 +21,7 @@ export class ProdutoComponent implements OnInit {
 
   listaProdutos: Produtos[];
 
-  produto: Produtos = new Produtos();
+  produto: Produtos = new Produtos;
 
   alerta: boolean = false;
 
@@ -50,6 +50,8 @@ export class ProdutoComponent implements OnInit {
 
   ngOnInit(): void {
     this.findAllProdutos(this.pagina, this.quantidade, this.ordenar, this.direcao);
+
+    window.scroll(0, 0)
 
     let item: string = localStorage.getItem('delOk');
 

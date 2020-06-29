@@ -22,6 +22,9 @@ import { ProdutoDeletarComponent } from './administrador/produto-deletar/produto
 import { UsuarioComponent } from './administrador/usuario/usuario.component';
 import { UsuarioEditarComponent } from './administrador/usuario-editar/usuario-editar.component';
 import { UsuarioDeletarComponent } from './administrador/usuario-deletar/usuario-deletar.component';
+import { MeuPerfilComponent } from './meu-perfil/meu-perfil.component';
+import { MensagensComponent } from './administrador/mensagens/mensagens.component';
+import { MensagensDeleteComponent } from './administrador/mensagens-delete/mensagens-delete.component';
 
 
 @NgModule({
@@ -42,7 +45,10 @@ import { UsuarioDeletarComponent } from './administrador/usuario-deletar/usuario
     ProdutoDeletarComponent,
     UsuarioComponent,
     UsuarioEditarComponent,
-    UsuarioDeletarComponent
+    UsuarioDeletarComponent,
+    MeuPerfilComponent,
+    MensagensComponent,
+    MensagensDeleteComponent
   ],
   imports: [
     BrowserModule,

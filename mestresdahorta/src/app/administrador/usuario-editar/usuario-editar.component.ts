@@ -17,6 +17,7 @@ export class UsuarioEditarComponent implements OnInit {
   ngOnInit(): void {
     let id = this.route.snapshot.params['id']
     this.findById(id)
+    window.scroll(0, 0)
 
   }
 

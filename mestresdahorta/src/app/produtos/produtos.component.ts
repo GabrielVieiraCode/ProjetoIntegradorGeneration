@@ -130,6 +130,7 @@ export class ProdutosComponent implements OnInit {
   
 
 
+    window.scroll(0, 0)
 
 
 

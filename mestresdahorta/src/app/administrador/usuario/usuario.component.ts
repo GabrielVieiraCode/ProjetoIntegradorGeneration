@@ -17,6 +17,7 @@ export class UsuarioComponent implements OnInit {
   ngOnInit(): void {
 
     this.findAllUsuarios();
+    window.scroll(0, 0)
 
   }
 
@@ -26,6 +27,5 @@ export class UsuarioComponent implements OnInit {
       this.listaUsuarios = resp;
     })
   }
-
 
 }
