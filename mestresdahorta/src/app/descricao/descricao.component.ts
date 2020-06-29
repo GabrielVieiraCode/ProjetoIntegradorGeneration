@@ -6,7 +6,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-descricao',
   templateUrl: './descricao.component.html',
-  styleUrls: ['./descricao.component.css']
+  styleUrls: ['./descricao.component.css'],
 })
 export class DescricaoComponent implements OnInit {
   produto: Produtos = new Produtos
@@ -25,3 +25,4 @@ export class DescricaoComponent implements OnInit {
     })
   }
 }
+
