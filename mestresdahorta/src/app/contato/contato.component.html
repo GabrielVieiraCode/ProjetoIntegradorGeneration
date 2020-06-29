@@ -2,23 +2,23 @@
     <h1 class="col-md-12 text-center mt-200">Fale conosco</h1>
     <div class="row ">
     <div class="col-md-6 ">
-        <form>
+        <!-- <form> -->
             <!-- <fa-icon [icon]="faInstagram" class="faInstagram fa-3x p-3"></fa-icon> -->
             <fa-icon [icon]="faUser"class="faUser fa-1x p-1"></fa-icon>
               <label for="Nome">Seu nome</label>
-              <input type="Nome" class="form-control" id="Nome" >
+              <input type="Nome" class="form-control" id="Nome"  [(ngModel)]="contato.nome">
               <fa-icon [icon]="faEnvelope" class="faEnvelope fa-1x p-1"></fa-icon>
-              <label for="Email">Email</label>
-              <input type="Email" class="form-control" id="Email">
+              <label for="Email" >Email</label>
+              <input type="Email" class="form-control" id="Email" [(ngModel)]="contato.email">
               <fa-icon [icon]="faPhone" class="faPhone fa-1x p-1"></fa-icon> 
                 <label for="Tel">Telefone</label>
-                <input type="Tel" class="form-control" id="Tel">
+                <input type="Tel" class="form-control" id="Tel"  [(ngModel)]="contato.telefone">
 
-                <label for="Mensagem">Mensagem</label>
-                <textarea class="form-control" id="Mensagem" rows="8"></textarea>
+                <label for="Mensagem" >Mensagem</label>
+                <textarea class="form-control" id="Mensagem" rows="8" [(ngModel)]="contato.mensagem"></textarea>
 <hr>
-            <button type="submit" class="btn btn-outline-success w-100 ">Enviar</button>
-          </form>
+            <button type="submit" class="btn btn-outline-success w-100 " (click)="publicar()">Enviar</button>
+          <!-- </form> -->
         </div>
     <div class="col-md-6 ">
         <div class="mapa">
