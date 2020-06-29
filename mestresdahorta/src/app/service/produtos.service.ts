@@ -12,8 +12,12 @@ export class ProdutosService {
 
   }
 
-  findAllProdutos() {
-    return this.http.get('http://localhost:8080/produtos');
+  findAllProdutos(pagina, quantidade, ordenar, direcao) {
+    return this.http.get(`http://localhost:8080/produtos?page=${pagina}&size=${quantidade}&sort=${ordenar},${direcao}`);
+  }
+  
+  findAllProdutosByName(nome, pagina, quantidade, ordenar, direcao) {
+    return this.http.get(`http://localhost:8080/produtos/nome/${nome}?page=${pagina}&size=${quantidade}&sort=${ordenar},${direcao}`);
   }
 
   postProdutos(produto: Produtos) {

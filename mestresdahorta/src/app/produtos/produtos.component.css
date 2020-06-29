@@ -2,23 +2,90 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Titan+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300&display=swap');
 
-
-/* #organizador{
-    margin-top: 180px;
-} */
-
-#label-seletor{
-    margin-top:-10px;
+body{
+    font-family: 'Oxygen', sans-serif;  
 }
+
+#filtro{
+    
+    position: relative;
+    top:150px;
+    margin-bottom: 150px;
+    
+}
+
+#filtrar-por-label{
+    position: relative;
+    font-size: 20pt;
+
+}
+
+    
+#filtrar-por-select{
+    position: relative;
+    top: 55px;
+    right:50px;
+    font-size: 12pt;
+    min-width: 90px;
+    
+}
+
+
+#ordem-label{
+    position: relative;
+    font-size: 20pt;
+    text-align: center;
+}
+
+#ordem-select{
+    position: relative;
+    font-size: 12pt;
+}
+
+#npag-label{
+    position: relative;
+    font-size: 20pt;
+    text-align: center;
+
+}
+
+#npag-select{
+    position: relative;
+    font-size: 8pt;
+
+
+}
+
+#filtrar{
+    position: relative;
+    font-size: 20pt;
+
+}
+
+#buscar-input{
+    position: relative;
+    
+}
+
+#buscar-btn{
+    position: relative;
+    font-size: 20pt;
+
+}
+
+
+
 
 .card img{
     max-height: 128px;
 
 }
+
+
 .container{
     
-    margin: 180px auto 100px auto;
-    font-family: 'Gloria Hallelujah', cursive;
+    margin: 30px auto 100px auto;
+    font-family: 'Oxygen', sans-serif;  
     letter-spacing: 2px;
     font-weight: bolder;
 }
@@ -102,9 +169,6 @@ input {
     left:65px;
 }
 
-body {
-    padding: 2rem 0rem;
-  }
   
 
   
@@ -112,86 +176,289 @@ body {
     font-size: 1.5rem;
   }
   
+
+
+
+
+ /* MEDIA QUERY */
+
+
+  @media screen and (min-width:1310px){
+
+
+
+    #filtro{
+    
+        position: relative;
+        top:150px;
+        margin-bottom: 150px;
+        margin-left:auto;
+        margin-right:auto;
+        
+    }
+    
+    #filtrar-por-label{
+        position: relative;
+        font-size: 14pt;
+    
+    }
+    
+        
+    #filtrar-por-select{
+        position: relative;
+        top:0px;
+        left: 10px;
+        font-size: 12pt;
+        min-width: 90px;
+        
+    }
+    
+    
+    #ordem-label{
+        position: relative;
+        font-size: 14pt;
+        text-align: center;
+    }
+    
+    #ordem-select{
+        position: relative;
+        font-size: 12pt;
+        left:50px;
+    }
+    
+    #npag-label{
+        position: relative;
+        left:95px;
+        font-size: 14pt;
+        text-align: center;
+    
+    }
+    
+    #npag-select{
+        position: relative;
+        font-size: 8pt;
+        font-size: 12pt;
+        left:100px;
+    
+    }
+    
+    #filtrar{
+        position: relative;
+        font-size: 14pt;
+        right:-135px;
+        top:-2px;
+    }
+    
+    #buscar-input{
+        position: relative;
+        top:-60px;
+        font-size: 12pt;
+        right:170px;
+        
+        
+    }
+
+    #barra-pesquisa{
+        width:100px;
+    }
+    
+    #buscar-btn{
+        position: relative;
+        top:-60px;
+        right:100px;
+        font-size: 14pt;
+    
+    }
+  }
+
+
+
+@media screen and (min-width:1199px) and (max-width:1309px){
+
+
+    
+    #filtro{
+    
+        position: relative;
+        top:150px;
+        margin-bottom: 150px;
+        margin-left:auto;
+        margin-right:auto;
+        
+    }
+    
+    #filtrar-por-label{
+        position: relative;
+        font-size: 14pt;
+        left:110px;
+    
+    }
+    
+        
+    #filtrar-por-select{
+        position: relative;
+        top:0px;
+        left: 70px;
+        font-size: 12pt;
+        min-width: 90px;
+        
+    }
+    
+    
+    #ordem-label{
+        position: relative;
+        font-size: 14pt;
+        text-align: center;
+        left:108px;
+    }
+    
+    #ordem-select{
+        position: relative;
+        font-size: 12pt;
+        left:108px;
+    }
+    
+    #npag-label{
+        position: relative;
+        left:147px;
+        font-size: 14pt;
+        text-align: center;
+    
+    }
+    
+    #npag-select{
+        position: relative;
+        font-size: 8pt;
+        font-size: 12pt;
+        left:147px;
+    
+    }
+    
+    #filtrar{
+        position: relative;
+        font-size: 14pt;
+        right:-180px;
+        top:-2px;
+    }
+    
+    #buscar-input{
+        position: relative;
+        top:1px;
+        font-size: 12pt;
+        right:602px;
+        
+        
+    }
+
+    #barra-pesquisa{
+        width:100px;
+    }
+    
+    #buscar-btn{
+        position: relative;
+        top:0px;
+        right:510px;
+        font-size: 14pt;
+    
+    }
+
+  }
+
+
+
+
+
+
+
+
+  @media screen and (min-width:992px) and (max-width:1198px){
   
-#container-ul{
-    padding-top: 0px;
-    margin-top:0px;
+    
+  #filtro{
+    
+    position: relative;
+    top:150px;
+    margin-bottom: 150px;
+    margin-left:auto;
+    margin-right:auto;
+    
 }
 
-#ul-produto{
-    background-color: none;
-    padding-top: 50px;
+#filtrar-por-label{
+    position: relative;
+    font-size: 14pt;
+    left:110px;
+
 }
 
-#ul-produto li{
-    display:inline-block;
-    margin-right:10px;
-    margin-left:10px;
-    background-color: #dddddd;
-    border-radius: 200px;
-    width:22px;
-    height:22px;
+    
+#filtrar-por-select{
+    position: relative;
+    top:0px;
+    left: 70px;
+    font-size: 12pt;
+    min-width: 90px;
+    
+}
+
+
+#ordem-label{
+    position: relative;
+    font-size: 14pt;
     text-align: center;
+    left:108px;
+}
+
+#ordem-select{
+    position: relative;
+    font-size: 12pt;
+    left:108px;
+}
+
+#npag-label{
+    position: relative;
+    left:147px;
+    font-size: 14pt;
+    text-align: center;
+
+}
+
+#npag-select{
+    position: relative;
+    font-size: 8pt;
+    font-size: 12pt;
+    left:147px;
+
+}
+
+#filtrar{
+    position: relative;
+    font-size: 14pt;
+    right:-180px;
+    top:-2px;
+}
+
+#buscar-input{
+    position: relative;
+    top:1px;
+    font-size: 12pt;
+    right:548px;
+    
     
 }
 
-#marcador-li {
-    background-color: white;
-
+#barra-pesquisa{
+    width:100px;
 }
 
-@media screen and (max-width:1199px){
+#buscar-btn{
+    position: relative;
+    top:0px;
+    right:460px;
+    font-size: 14pt;
 
-    #card img {
-        max-height:75px;
-    }
-
-    label {
-        font-family: monospace;
-        font-size: 13pt;
-        font-weight: normal;
-        letter-spacing: 1px;
-        position: relative;
-        left: 28px;
-    }
-    .product-input1{
-        margin-left:-23px;
-        font-family: monospace;
-        border-color: #dddddd;
-        border-radius: 8px;
-    }
-
-    #btn-comprar{
-        margin-left: 27px;
-    }
 }
-
-/* @media screen and (max-width:991px){
-.container{
-    margin-top: 65px;
-    
-}
-#card img {
-        max-height:75px;
-}
-    label {
-        font-family: monospace;
-        font-size: 13pt;
-        font-weight: normal;
-        letter-spacing: 1px;
-        position: relative;
-        left:-3px;
-    }
-    .product-input1{
-        margin-left:-60px;
-        font-family: monospace;
-        border-color: #dddddd;
-        border-radius: 8px;
-    }
-    #btn-comprar{
-        margin-left: -4px;
-    }
-} */
+  }
 
 @media screen and (min-width:768px) and (max-width:991px){
     .container{
@@ -290,14 +557,78 @@ body {
     }
 }
 
-@media screen and (min-width:411px) and (max-width:450px){
+@media screen and (min-width:413px) and (max-width:450px){
     
-    #card img{
-		max-height: 140px;
-	}
-
-    .container{
+    #filtro{
+        top:20px;
         margin-top:50px;
+        margin-bottom: 410px!important;
+        text-align: center;
+
+    }
+
+    #filtrar-por-label{
+        left: 60px;
+    }
+        
+    #filtrar-por-select{
+        top: 43px;
+        right:122px;
+        
+    }
+
+    #ordem-label{
+        top:70px;
+        left:144px;
+    }
+
+    #ordem-select{
+
+        top:110px;
+        left:44px;
+        
+    }
+
+    #npag-label{
+        font-size: 20pt;
+        top:138px;
+        left: 82px;    
+    }
+    
+    #npag-select{
+        font-size: 12pt;
+        top:183px;
+        right:61px;
+    
+    }
+    
+    #filtrar{
+        font-size: 20pt;
+        top:220px;
+        left:111px;
+    }
+    
+    #buscar-input{
+        font-size: 20pt;
+        top:252px;
+        right:22px;
+        
+    }
+    
+    #buscar-btn{
+        font-size:20pt;
+        top:318px;
+        right:127px;
+        
+    }
+    
+
+    #card img{
+		max-height: 128px;
+	}
+    .container{
+        margin-top:60px;
+        width: auto;
     }
 
     label {
@@ -306,28 +637,196 @@ body {
         font-weight: normal;
         letter-spacing: 1px;
         position: relative;
-        left:70px;
+        left:60px;
     }
     .product-input1{
-        margin-left:18px;
+        margin-left:0px;
         font-family: monospace;
         border-color: #dddddd;
         border-radius: 8px;
     }
 
     #btn-comprar{
-        margin-left: 61px;
-
+        margin-left: 45px;
     }
 
     #card{
-        margin-left:48px;
-        margin-right:-85px;
+        margin-left:67px;
+        margin-right:3px;
+        width:100%
     }
 }
 
 
+@media screen and (min-width:411px) and (max-width:412px){
+   
+    #filtro{
+        top:20px;
+        margin-top:50px;
+        margin-bottom: 410px!important;
+        text-align: center;
+
+    }
+
+    #filtrar-por-label{
+        left: 57px;
+    }
+        
+    #filtrar-por-select{
+        top: 43px;
+        right:123px;
+    }
+
+    #ordem-label{
+        top:70px;
+        left:144px;
+    }
+
+    #ordem-select{
+
+        top:110px;
+        left:41px;
+        
+    }
+
+    #npag-label{
+        font-size: 20pt;
+        top:138px;
+        left: 80px;    
+    }
+    
+    #npag-select{
+        font-size: 12pt;
+        top:183px;
+        right:63px;
+    
+    }
+    
+    #filtrar{
+        font-size: 20pt;
+        top:220px;
+        left:110px;
+    }
+    
+    #buscar-input{
+        font-size: 20pt;
+        top:252px;
+        right:20px;
+        
+    }
+    
+    #buscar-btn{
+        font-size:20pt;
+        top:318px;
+        right:126px;
+        
+    }
+    
+
+    #card img{
+		max-height: 128px;
+	}
+    .container{
+        margin-top:60px;
+        width: auto;
+    }
+
+    label {
+        font-family: monospace;
+        font-size: 13pt;
+        font-weight: normal;
+        letter-spacing: 1px;
+        position: relative;
+        left:58px;
+    }
+    .product-input1{
+        margin-left:2px;
+        font-family: monospace;
+        border-color: #dddddd;
+        border-radius: 8px;
+    }
+
+    #btn-comprar{
+        margin-left: 44px;
+    }
+
+    #card{
+        margin-left:69px;
+        margin-right:3px;
+        width:100%
+    }
+}
+
+
+
+
+
+
 @media screen and (min-width:375px) and (max-width:410px){
+   
+    #filtro{
+        top:20px;
+        margin-top:50px;
+        margin-bottom: 410px!important;
+        text-align: center;
+
+    }
+
+    #filtrar-por-label{
+        left: 45px;
+    }
+        
+    #filtrar-por-select{
+        top: 85px;
+        right:127px;
+        
+    }
+
+    #ordem-label{
+        top:90px;
+        left:127px;
+    }
+
+    #ordem-select{
+
+        top:131px;
+        left:27px;
+        
+    }
+
+    #npag-label{
+        font-size: 20pt;
+        top:170px;
+        left: 63px;    
+    }
+    
+    #npag-select{
+        font-size: 12pt;
+        top:214px;
+        right:80px;
+    
+    }
+    
+    #filtrar{
+        font-size: 20pt;
+        top:250px;
+        left:91px;
+    }
+    
+    #buscar-input{
+        font-size: 20pt;
+        top:270px;
+        right:1px;
+        
+    }
+    
+    #buscar-btn{
+        font-size:20pt;
+        top:332px;
+        right:107px;
+        
+    }
+    
 
     #card img{
 		max-height: 128px;
@@ -366,7 +865,73 @@ body {
 
 
 @media screen and (min-width:360px) and (max-width:374px){
+    
+    
+    #filtro{
+        top:20px;
+        margin-top:50px;
+        margin-bottom: 410px!important;
+        text-align: center;
 
+    }
+
+    #filtrar-por-label{
+        left: 43px;
+    }
+        
+    #filtrar-por-select{
+        top: 85px;
+        right:120px;
+        
+    }
+
+    #ordem-label{
+        top:90px;
+        left:119px;
+    }
+
+    #ordem-select{
+
+        top:131px;
+        left:18px;
+        
+    }
+
+    #npag-label{
+        font-size: 20pt;
+        top:170px;
+        left: 56px;    
+    }
+    
+    #npag-select{
+        font-size: 12pt;
+        top:214px;
+        right:90px;
+    
+    }
+    
+    #filtrar{
+        font-size: 20pt;
+        top:250px;
+        left:83px;
+    }
+    
+    #buscar-input{
+        font-size: 20pt;
+        top:270px;
+        right:1px;
+        
+    }
+    
+    #buscar-btn{
+        font-size:20pt;
+        top:335px;
+        right:100px;
+        
+    }
+    
+   
+    
     #card img{
 		max-height: 128px;
 	}
@@ -402,13 +967,81 @@ body {
 }
 
 @media screen and (min-width:320px) and (max-width:359px){
-	#card img{
+    
+    #filtro{
+        top:20px;
+        margin-top:50px;
+        margin-bottom: 410px!important;
+        text-align: center;
+
+    }
+
+    #filtrar-por-label{
+        left: 40px;
+        
+    }
+        
+    #filtrar-por-select{
+        top: 85px;
+        right:107px;
+        min-width: 90px;
+    }
+
+    #ordem-label{
+        top:90px;
+        left:100px;
+    }
+
+    #ordem-select{
+
+        top:131px;
+        left:-2px;
+        
+    }
+
+    #npag-label{
+        font-size: 20pt;
+        top:170px;
+        left: 37px;    
+    }
+    
+    #npag-select{
+        font-size: 12pt;
+        top:214px;
+        right:108px;
+    
+    }
+    
+    #filtrar{
+        font-size: 20pt;
+        top:250px;
+        left:63px;
+    }
+    
+    #buscar-input{
+        font-size: 20pt;
+        top:275px;
+        left:-2px;
+        
+    }
+    
+    #buscar-btn{
+        font-size:20pt;
+        top:335px;
+        right:80px;
+        
+    }
+    
+
+        
+    
+    #card img{
 		max-height: 128px;
 	}
 	
 	
 	.container{
-        margin-top:60px;
+        margin-top:280px;
     }
 
     label {
@@ -438,6 +1071,8 @@ body {
 }
 
 @media screen and (min-width:300px) and (max-width:319px){
+  
+    
     .container{
         margin-top:60px;
     }

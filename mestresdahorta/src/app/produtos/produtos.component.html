@@ -1,85 +1,113 @@
 
-<div class="container col-12">
-    <section class=" d-flex justify-content-center flex-wrap my-3" id="organizador">
+<section class="container col-12 col-lg-12 d-flexjustify-content-center flex-wrap" id="filtro">
 
-        <div class=" mr-5 d-flex justify-content-between responsivo">
+    <div class="d-flex justify-content-between responsivo">
 
-            <div class=" mr-5 d-flex pt-3 flex-wrap filtros" action="">
+        <div class="d-flex pt-3 flex-wrap filtros" action="">
 
-                <div class="form-group d-flex justify-content-center">
-                    <label class="control-label mx-5">Ordenar:</label>
-                    <div>
+            <div class="form-group d-flex justify-content-center">
+                <label class="control-label mx-5" id="filtrar-por-label">filtrar por</label>
+                <div>
 
-                        <select name="txt_order mx-3" id="ordenarPor" size="1" id="label-seletor" class=" ml-3 mb-5 fFiltro form-control input-sm">
-                            <option value="none" selected=""></option>
-                            <option value="preco">Preço</option>
-                            <option value="nome">Nome</option>
-                        </select>
+                    <select name="txt_order ml-5" id="filtrar-por-select" size="1" class="fFiltro form-control input-sm">
+                        <option value="nome" selected="nome">nome</option>
+                        <option value="preco">Preço</option>
+                    </select>
 
-                    </div>
-                </div>
-
-                <div class="form-group d-flex justify-content-center">
-                    <label class="control-label mx-5">Ordem:</label>
-                    <div>
-
-                        <select name="txt_order" id="ordem" size="1" id="label-seletor" class=" ml-3 fFiltro form-control input-sm">
-                            <option value="none" selected=""></option>
-                            <option value="desc">Decrescente</option>
-                            <option value="asc">Crescente</option>
-
-                        </select>
-
-                    </div>
-
-                </div>
-
-                <div class="form-group d-flex justify-content-center">
-                    <label class="control-label mx-5">nº de páginas:</label>
-                    <div >
-
-                        <select name="txt_order" size="1" id="quantidade" id="label-seletor" class=" ml-3 fFiltro form-control input-sm">
-                            <option value="10" selected="10">10</option>
-                            <option value="20">20</option>
-                            <option value="30">30</option>
-                            <option value="40">40</option>
-
-                        </select>
-
-                    </div>
                 </div>
             </div>
+
+            <div class="form-group d-flex justify-content-center">
+                <label id="ordem-label" class="control-label mx-2">Ordem</label>
+                <div>
+
+                    <select name="txt_order" id="ordem-select" size="1" class="fFiltro form-control input-sm">
+                        <option value="desc" selected="">Decresc.</option>
+                        <option value="asc">Cresc.</option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+            <div class="form-group d-flex justify-content-center">
+                <label id="npag-label" class="control-label mx-2">nº de páginas</label>
+                <div>
+
+                    <select name="txt_order" size="1" id="npag-select" class="fFiltro form-control input-sm">
+                        <option value="12" selected="12">12</option>
+                        <option value="15">15</option>
+                        <option value="20">20</option>
+                        <option value="40">40</option>
+
+                    </select>
+
+                </div>
+            </div>
+
+            <button class="btn btn-outline-primary mx-3 mb-3" type="button" (click)="filtrarProdutos()" name="btFiltrar" id="filtrar" value="Filtrar">Filtrar</button>
         </div>
-    </section>
-</div>
+        
+    </div>
+            <div class="d-flex justify-content-end ">
+
+                <div id="buscar-input" class="form-inline my-2 my-lg-0 d-flex justify-content-center pesquisa">
+                    <input id="barra-pesquisa" class="form-control mr-sm-2 pesquisaMobile" type="search" placeholder="Pesquisar"
+                        aria-label="Search" [(ngModel)]="barraPesquisa">
+                </div>
+                
+                <div>
+                    <button id="buscar-btn" class="btn btn-outline-success" (click)="buttonPesquisar()">Buscar</button>
+                </div>
+            </div>
+           
+</section>
+
+<!-- CARD DE PRODUTOS -->
 
 <div class="container">
-
- 
     <div class="row mb-5">
-
-
-
-        <!-- NOVO CARD -->
-        <div class="col-8 col-md-3 col-lg-3">
-            <div class="card" id="card" *ngFor="let produto of listaProdutos">
-
+        <div class="col-8 col-md-3 col-lg-3" *ngFor="let produto of listaProdutos">
+            <div class="card" id="card" >
                 <div class="card-body">
-                    <img id="card-img" class="card-img img-fluid" src="{{produto.foto}}">
+                    <figure  class="img-legenda" [routerLink] = "['/descricao', produto.id]">
+                        <img class="card-img img-fluid" src="{{produto.foto}}">
+                         <figcaption>
+                            <h4>mais detalhes</h4>
+                        </figcaption>
+                    </figure>
 
                     <h4 class="card-title text-center mt-4">{{produto.nome}}</h4>
                     <p class="card-text mb-2"></p>
 
                     <form method="post" action="">
                         <div class="price text-success mt-3">
-                            <label for="name" class=" ml-1">R$&nbsp;{{produto.preco}}</label>
+                            <label for="name" class=" ml-1">R${{produto.preco}}</label>
                             <input class="product-input1" type="number" value="1" min="1" max="20" step="1" />
 
                         </div>
                     </form>
                     <button id="btn-comprar" type="button" class=" btn card-link mt-2 px-3">comprar</button>
 
+
+                    
                 </div>
             </div>
+            
         </div>
-
+        
+        <div class="d-flex justify-content-center py-5">
+            <nav aria-label="Page navigation shadow-lg">
+                <button class="btn btn-outline-primary" (click)="paginar(0)"> <- </button>
+                        <button class="btn btn-primary" *ngFor="let pagina of arrayDePaginas" (click)="paginar(pagina)">{{pagina}}</button>
+                        <button class="btn btn-outline-primary" (click)="paginar(3)"> -> </button> 
+            </nav>
+            
+        </div>
+            <div class="d-flex justify-content-center py-1">
+            <span class="text-muted "> Página atual {{pagina}}</span>
+            </div>
+    </div>
+    
+</div>

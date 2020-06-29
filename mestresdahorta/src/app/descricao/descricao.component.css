@@ -9,14 +9,14 @@
 
 /* CONTAINER COM A DESCRIÇÃO DO PRODUTO */
 
+
 #main-cont{
-    margin-top:900px;
+    margin-top:210px;
     padding-top:50px;
     letter-spacing: 1px;
     font-family: 'Oxygen', sans-serif;
     font-weight: bold;
     background-color: white;
-    
 }
 
 h2{
@@ -35,10 +35,6 @@ h4{
 
 }
 
-#label-input{
-    
-}
-
 
 #desc-produto{
     /* max-width: 200px; */
@@ -54,11 +50,9 @@ h4{
 #div-btn{
     background-color:white;
     padding-bottom: 30px;
+    margin-bottom: 50px;
 }
 
-#btn-comprar{
-    /* margin-left: 49px; */
-}
 
 .btn{
     letter-spacing: 3px;
@@ -92,7 +86,7 @@ input {
     border-color: #dddddd;
     border-radius: 8px;
     position: relative;
-    left:65px;
+    left:58px;
 }
 
 
