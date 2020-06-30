@@ -21,6 +21,7 @@ export class CadastroComponent implements OnInit {
   alerta: boolean = false
   alertaConfirma: boolean = false
 
+  validaEmail: boolean = false
 
   constructor(private usuariosService: UsuariosService, private router: Router) { }
 
@@ -31,7 +32,13 @@ export class CadastroComponent implements OnInit {
   }
 
   cadastrar() {
-    if (this.cadastro.senha === this.confirmaSenha) {
+    var email = this.cadastro.email
+
+    if (email.includes("@") && email.endsWith('.com') || email.endsWith('.br') || email.endsWith('.net') || email.endsWith('.co') || email.endsWith('.org') || email.endsWith('.gov')) {
+      this.validaEmail = true;
+
+    }
+    else if (this.cadastro.senha === this.confirmaSenha && this.validaEmail === true) {
       this.usuariosService.cadastroUsuario(this.cadastro).subscribe((resp: Usuarios) => {
         this.cadastro = resp;
         this.alertaConfirma;
@@ -39,8 +46,15 @@ export class CadastroComponent implements OnInit {
         this.router.navigate(['/home']);
       });
     }
-
+    else {
+      console.log("erroemail")
+    }
   }
+
+
+
+
+
 
   fazerLogin() {
     this.alerta = false;
