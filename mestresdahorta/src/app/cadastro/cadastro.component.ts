@@ -19,9 +19,14 @@ export class CadastroComponent implements OnInit {
   confirmaSenha: string
 
   alerta: boolean = false
+
   alertaConfirma: boolean = false
 
   validaEmail: boolean = false
+
+  alerta2: boolean = false
+  alertaSenha: boolean = false
+
 
   constructor(private usuariosService: UsuariosService, private router: Router) { }
 
@@ -41,13 +46,12 @@ export class CadastroComponent implements OnInit {
     else if (this.cadastro.senha === this.confirmaSenha && this.validaEmail === true) {
       this.usuariosService.cadastroUsuario(this.cadastro).subscribe((resp: Usuarios) => {
         this.cadastro = resp;
-        this.alertaConfirma;
         // location.assign('/cadastro')
-        this.router.navigate(['/home']);
+        this.router.navigate(['/cadastro'])
+        this.alerta2 = true;
       });
-    }
-    else {
-      console.log("erroemail")
+    } else {
+      this.alertaSenha = true
     }
   }
 
@@ -57,7 +61,7 @@ export class CadastroComponent implements OnInit {
 
 
   fazerLogin() {
-    this.alerta = false;
+    // this.alerta = false;
 
     this.usuariosService.logar(this.usuarioLogin).subscribe((resp: UsuarioLogin) => {
       this.usuarioLogin = resp

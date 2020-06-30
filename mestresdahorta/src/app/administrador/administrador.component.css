@@ -1,10 +1,10 @@
+/* IMPORTAÇÃO DAS FONTES  */
+
+
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300&display=swap');
 
 
-.container{
-    margin-top: 160px;
-  }
   
   .text-titulo{
     font-family: 'Fredoka One', cursive;
@@ -17,10 +17,14 @@
     font-weight: lighter;
   }
   
-  
-  @media screen and (max-width:1000px) {
-      .container{
-          margin-top:60px;
+   .botoes {
+     margin-top: 13em;
+   }   
+
+
+  @media screen and (max-width: 991px) {
+      .botoes{
+          margin-top:5em;
     }
   }
   

@@ -42,23 +42,34 @@ span, button {
     color: #575151;
     /* color: black; */
     background: #C8F2C8;
-    border: 1px solid #5D5D5D;
+    border-radius: 18px;
+    /* border: 1px solid #5D5D5D; */
+    transition: color 0.5s;
 }
 
 .btn-perdeu-senha{
     /* color: #575151; */
     color: black;
     background: #A2A2A2;
-    border: 1px solid #5D5D5D;
+    /* border: 1px solid #5D5D5D; */
+    border-radius: 18px;
+    transition: color 0.5s;
+    
 }
 
 .btn-entrar:hover {
     color: darkgreen;
+    box-shadow: 1px 1px 4px gray;
+    font-weight: 700;
+    transition: color 0.5s;
 
 }
 
 .btn-perdeu-senha:hover{
- color: darkgreen;
+ color: white;
+ box-shadow: 1px 1px 4px gray;
+ transition: color 0.5s;
+ font-weight: 700;
 
 }
 

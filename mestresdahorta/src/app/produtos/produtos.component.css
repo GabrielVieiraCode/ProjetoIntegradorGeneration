@@ -119,9 +119,7 @@ body{
 
 .btn:hover{
     color:white;
-    box-shadow: 1px 1px 4px gray;
-
-     
+    box-shadow: 1px 1px 4px gray;    
 }
 
 figure.img-legenda figcaption h4{
