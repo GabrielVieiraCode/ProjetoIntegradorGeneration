@@ -1,5 +1,5 @@
-.container{
-    margin-top: 160px;
+.botoes{
+    margin-top: 13em;
   }
   
   .text-titulo{
@@ -14,8 +14,8 @@
   }
   
   
-  @media screen and (max-width:1000px) {
-      .container{
-          margin-top:60px;
-    }
+  @media screen and (max-width: 991px) {
+    .botoes{
+        margin-top:5em;
   }
+}

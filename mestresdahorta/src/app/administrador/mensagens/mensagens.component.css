@@ -14,6 +14,9 @@
     font-weight: lighter;
   }
   
+  .titulo-card {
+    font-weight: bolder;
+  }
   
   @media screen and (max-width:1000px) {
       .container{
