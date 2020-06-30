@@ -38,11 +38,22 @@ span, button {
     border-right: 1px solid grey;
 }
 
-.btn-entrar {
-    color: #575151;
-    /* color: black; */
-    background: #C8F2C8;
-    border: 1px solid #5D5D5D;
+
+.btn{
+    letter-spacing: 3px;
+    color:#5D5D5D;
+    background-color:#C8F2C8;
+    transition: font-weight box-shadow text-shadow 1s;
+    border-radius: 18px;
+  
+
+}
+
+.btn:hover{
+    font-weight:bolder;
+    box-shadow:1px 1px 4px #5D5D5D;
+    
+     
 }
 
 .btn-perdeu-senha{
@@ -52,10 +63,6 @@ span, button {
     border: 1px solid #5D5D5D;
 }
 
-.btn-entrar:hover {
-    color: darkgreen;
-
-}
 
 .btn-perdeu-senha:hover{
  color: darkgreen;
