@@ -12,7 +12,7 @@
         </div>
     </div>
     <p class="display-4 mb-4 text-center text-titulo">Mensagens dos usuários</p>
-    <div class="card" *ngFor="let contatos of  listaContatos">
+    <div class="card mb-4" *ngFor="let contatos of  listaContatos">
         <div class="card-header">
             <span class="titulo-card">Id:</span> {{contatos.id}}
         </div>
@@ -29,13 +29,9 @@
             <span>Mensagem: </span>{{contatos.mensagem}}
         </div>
         <div>
-            <button type="button" class="btn  btn-outline-danger mt-3"
+            <button type="button" class="btn  btn-danger w-100 mt-3"
                 [routerLink]="['/administrador/mensagens/deletar', contatos.id]">Apagar</button>
         </div>
     </div>
-    <!-- Verificar se após a virgula é contato ou contatos -->
-    <!-- <div>
-        <button type="button" class="btn  btn-outline-danger mt-3"
-            [routerLink]="['/administrador/mensagens/deletar', contatos.id]">Apagar</button>
-    </div> -->
+
 </div>
