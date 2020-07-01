@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Produtos } from '../model/Produtos';
-
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +16,7 @@ export class ProdutosService {
     return this.http.get(`http://localhost:8080/produtos?page=${pagina}&size=${quantidade}&sort=${ordenar},${direcao}`);
   }
   
-  findAllProdutosByName(nome, pagina, quantidade, ordenar, direcao) {
+  findAllProdutosByName(nome, pagina, quantidade, ordenar, direcao){
     return this.http.get(`http://localhost:8080/produtos/nome/${nome}?page=${pagina}&size=${quantidade}&sort=${ordenar},${direcao}`);
   }
 
@@ -35,6 +35,5 @@ export class ProdutosService {
   deleteProdutos(id: number) {
     return this.http.delete(`http://localhost:8080/produtos/${id}`);
 
-  }
-
+  } 
 }

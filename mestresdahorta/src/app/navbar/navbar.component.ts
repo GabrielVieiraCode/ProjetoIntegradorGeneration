@@ -6,6 +6,8 @@ import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { Router } from '@angular/router';
 
 
+
+
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -52,5 +54,7 @@ export class NavbarComponent implements OnInit {
     localStorage.setItem("id", nome);
     this.router.navigate(['/meu-perfil'])
   }
-
+    public pesquisa (termoDaBusca:string):void{
+      console.log(termoDaBusca)
+    }
 }

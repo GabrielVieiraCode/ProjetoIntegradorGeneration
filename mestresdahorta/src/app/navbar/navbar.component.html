@@ -21,7 +21,8 @@
                 <form class="pesquisar-form form-inline">
 
                     <input class="form-input form-control shadow-none" type="search" placeholder="Procurando algo?"
-                        aria-label="Search">
+                        #termoDaPesquisa
+                        aria-label="Search" (keyup)="pesquisa(termoDaPesquisa.value)">
 
                     <button class="form-button btn bg-dark shadow-none" id="simbolo-pesquisar" type="button">
                         <fa-icon [icon]="faPesquisar" class="faPesquisar fa-1x text-light"></fa-icon>
