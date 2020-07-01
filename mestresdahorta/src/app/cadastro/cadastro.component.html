@@ -26,7 +26,7 @@
                             <div class="alert alert-danger mt-2 w-50" *ngIf="alerta" role="alert">
                                 <span>E-mail e senha incorretos </span>
                             </div>
-                            <div class="mt-4">
+                            <div class="mt-4 ">
                                 <button type="submit" class="btn btn-perdeu-senha texto">Perdeu a sua
                                     senha?</button>
                             </div>
@@ -86,8 +86,8 @@
                         </div>
 
 
-                        <div>
-                            <button type="button" class="btn btn-entrar" (click)="cadastrar()">Cadastrar</button>
+                        <div class="row justify-content-end">
+                            <button type="button" class=" btn btn-entrar" (click)="cadastrar()">Cadastrar</button>
                         </div>
 
                         <div class="alert alert-success mt-2" role="alert" *ngIf="alertaConfirma">

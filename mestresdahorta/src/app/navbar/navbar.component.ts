@@ -24,6 +24,13 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+
+public barraPesquisa(termoDaPesquisa: string): void {
+  console.log(termoDaPesquisa)
+}
+
+
   sair() {
     localStorage.clear();
     this.router.navigate(['/cadastro']);

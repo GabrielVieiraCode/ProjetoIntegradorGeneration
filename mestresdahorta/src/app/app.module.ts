@@ -25,6 +25,9 @@ import { UsuarioDeletarComponent } from './administrador/usuario-deletar/usuario
 import { MeuPerfilComponent } from './meu-perfil/meu-perfil.component';
 import { MensagensComponent } from './administrador/mensagens/mensagens.component';
 import { MensagensDeleteComponent } from './administrador/mensagens-delete/mensagens-delete.component';
+import { observable, Observable } from 'rxjs';
+import { map } from 'rxjs/operators'
+import { MapOperator } from 'rxjs/internal/operators/map';
 
 
 @NgModule({
@@ -55,7 +58,9 @@ import { MensagensDeleteComponent } from './administrador/mensagens-delete/mensa
     AppRoutingModule,
     FontAwesomeModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    Observable,
+    MapOperator
   ],
   providers: [],
   bootstrap: [AppComponent]

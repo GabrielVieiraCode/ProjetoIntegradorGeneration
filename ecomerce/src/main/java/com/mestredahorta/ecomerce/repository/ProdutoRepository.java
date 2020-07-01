@@ -8,9 +8,6 @@ import org.springframework.stereotype.Repository;
 import com.mestredahorta.ecomerce.model.produto;
 
 
-
-
-
 @Repository
 public interface ProdutoRepository  extends JpaRepository<produto, Long> {
 	

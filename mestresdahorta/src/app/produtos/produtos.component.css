@@ -110,19 +110,24 @@ body{
 
 .btn{
     letter-spacing: 3px;
-    color:black;
-    background-color: #8BA96B;
-    transition: color 0.5s;
+    color:#5D5D5D;
+    background-color:#C8F2C8;
+    transition: font-weight box-shadow text-shadow 1s;
     border-radius: 18px;
+  
 
 }
 
 .btn:hover{
-    color:white;
-    box-shadow: 1px 1px 4px gray;
-
+    font-weight:bolder;
+    box-shadow:1px 1px 4px #5D5D5D;
+    
      
 }
+
+
+
+
 
 figure.img-legenda figcaption h4{
     font-size: 12pt;
@@ -161,6 +166,7 @@ label {
     position: relative;
     left: 50px;
 }
+
 input {
     font-family: monospace;
     border-color: #dddddd;
