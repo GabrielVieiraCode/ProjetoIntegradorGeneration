@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Produtos } from '../model/Produtos';
 import { ProdutosService } from '../service/produtos.service';
 import { Conteudo } from '../model/Conteudo';
@@ -15,7 +15,7 @@ export class ProdutosComponent implements OnInit {
     conteudo: Conteudo = new Conteudo;
   
     //variaveis de opcoes do usuario
-    barraPesquisa: string;
+    @Input () barraPesquisa: string;
     pagina: number = 0;
     private quantidade: number = 12;
     numeroDePaginas:number;
@@ -42,6 +42,11 @@ export class ProdutosComponent implements OnInit {
   
     }
   
+
+
+
+
+
     findAllProdutos(pagina, quantidade, ordenar, direcao) {
       this.produtosService.findAllProdutos(pagina, quantidade, ordenar, direcao).subscribe((resp: Conteudo) => {
         this.conteudo = resp;
@@ -82,6 +87,10 @@ export class ProdutosComponent implements OnInit {
     // }
   
   
+
+
+
+
   
     buttonPesquisar() {
       // se a barra de pesquisa for vazia ou menor que 1 ele mostra todos os produtos
