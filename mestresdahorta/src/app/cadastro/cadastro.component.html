@@ -48,7 +48,7 @@
                 <div class="col-md-10 mt-5 mb-5 ">
                     <h2 class="cadastro">quero me cadastrar</h2>
 
-                    <div>
+                    <div *ngIf="!alerta2">
                         <div class="form-group">
                             <label for="nome">Nome * </label>
                             <input type="text" class="form-control" id="nome" placeholder="Nome"
@@ -87,17 +87,15 @@
                         <div class="alert alert-danger" *ngIf="alertaSenha" role="alert">
                             Senhas não conferem
                         </div>
-
-
                         <div>
                             <button type="button" class="btn btn-entrar mb-4" (click)="cadastrar()">Cadastrar</button>
                         </div>
-
-                        <div class="alert alert-success" *ngIf="alerta2" role="alert">
-                            Usuário cadastrado com sucesso!
-                        </div>
-
                     </div>
+
+                    <div class="alert alert-success" *ngIf="alerta2" role="alert">
+                        Usuário cadastrado com sucesso!
+                    </div>
+
 
                 </div>
             </div>
