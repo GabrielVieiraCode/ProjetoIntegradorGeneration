@@ -18,18 +18,17 @@
             </div> <!-- menu-logo -->
 
             <div class="menu-pesquisar d-flex justify-content-center bd-highlight w-100">
-                <form class="pesquisar-form form-inline">
+                <div class="pesquisar-form form-inline">
                     
-                    <input  id="barra-pesquisa" class="form-input form-control shadow-none" type="search" placeholder="Procurando algo?" #termoDaPesquisa
-                    (keyup)="barraPesquisa(termoDaPesquisa.value)"
-                        aria-label="Search">
+                    <input  id="barra-pesquisa" class="form-input form-control shadow-none" type="search" placeholder="Procurando algo?" 
+                        aria-label="Search" name="barra-pesquisa" [(ngModel)]= "barraPesquisa">
 
-                    <button id="buscar-btn" class="form-button btn bg-dark shadow-none" type="button">
+                    <button id="buscar-btn" class="form-button btn bg-dark shadow-none" type="button" (click) = "pesquisarNav()"> 
                         
                         <fa-icon [icon]="faPesquisar" class="faPesquisar fa-1x text-light"></fa-icon>
                         
                     </button>
-                </form>
+                </div>
             </div> <!-- menu-pesquisar -->
 
             <div class="menu-icones d-flex justify-content-center align-items-center  w-25">

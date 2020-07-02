@@ -26,14 +26,26 @@ export class ProdutosComponent implements OnInit {
     ordenar:string = "nome";
     direcao: string = "asc";
     quantidadePorPagina:string;
+    pesquisaNav: string;
   
     constructor(private produtosService: ProdutosService) { }
   
     ngOnInit() {
-      this.findAllProdutos(this.pagina, this.quantidade, this.ordenar, this.direcao);
-      this.verificarNumeroDePaginas();
+      if (localStorage.getItem("pesquisaBarra").length > 1) {
+        this.pesquisaNav = localStorage.getItem("pesquisaBarra")
+        this.findAllProdutosByName(this.pesquisaNav, 0, this.quantidade, this.ordenar, this.direcao);
+        
+
+      }
+      else{
+        this.findAllProdutos(this.pagina, this.quantidade, this.ordenar, this.direcao);
+        this.verificarNumeroDePaginas();
+  
+      }
 
 
+
+    
 
       // ao iniciar seta as variaveis com os valores do filtro
       this.ordenar = (<HTMLInputElement>document.getElementById("filtrar-por-select")).value;
@@ -72,6 +84,7 @@ export class ProdutosComponent implements OnInit {
         this.listaProdutos = this.conteudo.content;
         this.numeroDePaginas = this.conteudo.totalPages;
         this.verificarNumeroDePaginas()
+        localStorage.removeItem("pesquisaBarra")
   
       })
     }
@@ -120,7 +133,7 @@ export class ProdutosComponent implements OnInit {
   
     verificarNumeroDePaginas(){
       if(this.numeroDePaginas == 0) {
-        this.arrayDePaginas.splice(0, this.arrayDePaginas.length)
+       return this.arrayDePaginas.splice(0, this.arrayDePaginas.length)
       }
       this.arrayDePaginas.splice(0, this.numeroDePaginas)
       for(let i = 0; i < this.numeroDePaginas; i++){

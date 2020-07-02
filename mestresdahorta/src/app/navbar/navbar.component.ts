@@ -16,7 +16,7 @@ export class NavbarComponent implements OnInit {
   faPesquisar = faSearch;
   faCarrinho = faShoppingBasket;
   faUsuario = faUser;
-
+  barraPesquisa: string;
   constructor(private router: Router) { }
 
   ngOnInit(): void {
@@ -24,8 +24,12 @@ export class NavbarComponent implements OnInit {
 
 
 
-public barraPesquisa(termoDaPesquisa: string): void {
-  console.log(termoDaPesquisa)
+pesquisarNav(){
+  alert(this.barraPesquisa)
+  console.log("Olá")
+  localStorage.setItem("pesquisaBarra", this.barraPesquisa)
+  location.assign("/produtos")
+  console.log("Olá")
 }
 
 
