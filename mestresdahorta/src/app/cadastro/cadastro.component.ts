@@ -39,26 +39,39 @@ export class CadastroComponent implements OnInit {
   }
 
   cadastrar() {
-    var email = this.cadastro.email
-
-    if (email.includes("@") && email.endsWith('.com') || email.endsWith('.br') || email.endsWith('.net') || email.endsWith('.co') || email.endsWith('.org') || email.endsWith('.gov')) {
-      this.validaEmail = true;
-
-    }
-    else if (this.cadastro.senha === this.confirmaSenha && this.validaEmail === true) {
+    if (this.cadastro.senha === this.confirmaSenha) {
       this.usuariosService.cadastroUsuario(this.cadastro).subscribe((resp: Usuarios) => {
         this.cadastro = resp;
         this.alerta2 = true;
         window.scroll(0, 0)
-        // setTimeout(() => {
-        //   location.assign('/cadastro')
-        //   this.router.navigate(['/cadastro'])
-        // }, 3000);
+        setTimeout(() => {
+          //   location.assign('/cadastro')
+          this.router.navigate(['/cadastro'])
+        }, 3000);
       });
     } else {
       this.alertaSenha = true
     }
+
   }
+
+  //   var email = this.cadastro.email
+
+  //   if (email.includes("@") && email.endsWith('.com') || email.endsWith('.br') || email.endsWith('.net') || email.endsWith('.co') || email.endsWith('.org') || email.endsWith('.gov')) {
+  //     this.validaEmail = true;
+
+  //   }
+  //   else if (this.cadastro.senha === this.confirmaSenha && this.validaEmail === true) {
+  //     this.usuariosService.cadastroUsuario(this.cadastro).subscribe((resp: Usuarios) => {
+  //       this.cadastro = resp;
+  //       // location.assign('/cadastro')
+  //       this.router.navigate(['/cadastro'])
+  //       this.alerta2 = true;
+  //     });
+  //   } else {
+  //     this.alertaSenha = true
+  //   }
+  // }
 
 
 
