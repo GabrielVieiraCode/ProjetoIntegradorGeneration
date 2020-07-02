@@ -46,6 +46,15 @@ export class NavbarComponent implements OnInit {
     }
     return ok;
   }
+  btnAdm() {
+    let ok = false;
+    let perfil = localStorage.getItem('perfil');
+
+    if (perfil == 'adm') {
+      ok = true;
+    }
+    return ok;
+  }
 
 
   teste(nome: string) {
