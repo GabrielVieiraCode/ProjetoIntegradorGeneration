@@ -25,11 +25,9 @@ export class NavbarComponent implements OnInit {
 
 
 pesquisarNav(){
-  alert(this.barraPesquisa)
-  console.log("Olá")
+  
   localStorage.setItem("pesquisaBarra", this.barraPesquisa)
   location.assign("/produtos")
-  console.log("Olá")
 }
 
 

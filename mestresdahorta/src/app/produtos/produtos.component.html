@@ -11,19 +11,19 @@
 
                     <select name="txt_order ml-5" id="filtrar-por-select" size="1" class="fFiltro form-control input-sm">
                         <option value="nome" selected="nome">nome</option>
-                        <option value="preco">Preço</option>
+                        <option value="preco">preço</option>
                     </select>
 
                 </div>
             </div>
 
             <div class="form-group d-flex justify-content-center">
-                <label id="ordem-label" class="control-label mx-2">Ordem</label>
+                <label id="ordem-label" class="control-label mx-2">ordem</label>
                 <div>
 
                     <select name="txt_order" id="ordem-select" size="1" class="fFiltro form-control input-sm">
-                        <option value="desc" selected="">Decresc.</option>
-                        <option value="asc">Cresc.</option>
+                        <option value="desc" selected="">decresc.</option>
+                        <option value="asc">cresc.</option>
 
                     </select>
 
@@ -46,21 +46,11 @@
                 </div>
             </div>
 
-            <button title="clique para mostrar todos os produtos" class="btn btn-outline-primary mx-3 mb-3" type="button" (click)="filtrarProdutos()" name="btFiltrar" id="filtrar" value="Filtrar">Filtrar</button>
+            <button title="clique para mostrar todos os produtos" class="btn btn-outline-primary mx-3 mb-3" type="button" (click)="filtrarProdutos()" name="btFiltrar" id="filtrar" value="Filtrar">filtrar</button>
         </div>
         
     </div>
-            <div class="d-flex justify-content-end ">
-
-                <div id="buscar-input" class="form-inline my-2 my-lg-0 d-flex justify-content-center pesquisa">
-                    <input id="barra-pesquisa" class="form-control mr-sm-2 pesquisaMobile" type="search" placeholder="Pesquisar"
-                        aria-label="Search" [(ngModel)]="barraPesquisa">
-                </div>
-                
-                <div>
-                    <button id="buscar-btn" class="btn btn-outline-success" (click)="buttonPesquisar()">Buscar</button>
-                </div>
-            </div>
+          
            
 </section>
 
@@ -97,17 +87,19 @@
             
         </div>
         
-        <div class="d-flex justify-content-center py-5">
-            <nav aria-label="Page navigation shadow-lg">
-                <button class="btn btn-outline-primary"> <- </button>
-                        <button class="btn btn-primary" *ngFor="let pagina of arrayDePaginas" (click)="paginar(pagina)">{{pagina}}</button>
-                        <button class="btn btn-outline-primary"> -> </button> 
-            </nav>
-            
-        </div>
-            <div class="d-flex justify-content-center py-1">
-            <span class="text-muted "> Página atual {{pagina}}</span>
+        <div class="col-12 justify-content-center d-flex  mt-5 pt-5 ">
+            <span class="text-muted "> pág: {{pagina}}</span>
             </div>
+        <div class="col-12 justify-content-center d-flex  mt-1">
+            <div class="row justify-content-center mt-5">
+                <nav aria-label="Page navigation shadow-lg">
+                    <button class="btn btn-outline-primary"> <- </button>
+                            <button class="btn btn-primary" *ngFor="let pagina of arrayDePaginas" (click)="paginar(pagina)">{{pagina}}</button>
+                            <button class="btn btn-outline-primary"> -> </button> 
+                </nav>
+            </div>
+        </div>
+            
     </div>
     
 </div>

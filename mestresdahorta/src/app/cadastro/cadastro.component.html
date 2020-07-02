@@ -23,17 +23,12 @@
                             <div class="alert alert-danger mt-2 w-75" *ngIf="alerta" role="alert">
                                 <span>E-mail e senha incorretos </span>
                             </div>
-<<<<<<< HEAD
-                            <div class="mt-4 ">
-                                <button type="submit" class="btn btn-perdeu-senha texto">Perdeu a sua
-=======
                             <div class="mt-4 d-inline-block">
                                 <button type="submit" class="btn btn-entrar texto  mr-3 mb-3"
                                     (click)='fazerLogin()'>Entrar</button>
 
 
                                 <button type="submit" class="btn btn-perdeu-senha  mb-3 texto">Perdeu a sua
->>>>>>> 82f07b89d703d7b4869efab77446fc96f537274a
                                     senha?</button>
                             </div>
                         </div>
@@ -89,18 +84,16 @@
                         <div class="alert alert-danger mb-3" *ngIf="!senha1.valid && senha1.touched" role="alert">
                             Confirme sua senha
                         </div>
-<<<<<<< HEAD
 
 
-                        <div class="row justify-content-end">
-                            <button type="button" class=" btn btn-entrar" (click)="cadastrar()">Cadastrar</button>
-=======
+
+                                             
                         <div class="alert alert-danger" *ngIf="alertaSenha" role="alert">
                             Senhas não conferem
->>>>>>> 82f07b89d703d7b4869efab77446fc96f537274a
                         </div>
+                        
                         <div>
-                            <button type="button" class="btn btn-entrar mb-4" (click)="cadastrar()">Cadastrar</button>
+                        <button type="button" class="btn btn-entrar mb-4" (click)="cadastrar()">Cadastrar</button>
                         </div>
                     </div>
 
