@@ -34,6 +34,8 @@ export class CadastroComponent implements OnInit {
 
     window.scroll(0, 0)
 
+    this.alerta2 = false
+
   }
 
   cadastrar() {
@@ -46,9 +48,12 @@ export class CadastroComponent implements OnInit {
     else if (this.cadastro.senha === this.confirmaSenha && this.validaEmail === true) {
       this.usuariosService.cadastroUsuario(this.cadastro).subscribe((resp: Usuarios) => {
         this.cadastro = resp;
-        // location.assign('/cadastro')
-        this.router.navigate(['/cadastro'])
         this.alerta2 = true;
+        window.scroll(0, 0)
+        // setTimeout(() => {
+        //   location.assign('/cadastro')
+        //   this.router.navigate(['/cadastro'])
+        // }, 3000);
       });
     } else {
       this.alertaSenha = true
