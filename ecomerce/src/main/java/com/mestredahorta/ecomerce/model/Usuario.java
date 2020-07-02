@@ -5,8 +5,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.Size;
@@ -38,6 +36,8 @@ public class Usuario {
 	@Column(name = "nm_senha", nullable = false)
 	@NotNull
 	private String senha;
+	
+	private String perfil;
 	
 //	@ManyToOne
 //	@JoinColumn(name = "cd_tipo")
@@ -74,6 +74,12 @@ public class Usuario {
 	}
 	public void setSenha(String senha) {
 		this.senha = senha;
+	}
+	public String getPerfil() {
+		return perfil;
+	}
+	public void setPerfil(String perfil) {
+		this.perfil = perfil;
 	}
 	
 	
