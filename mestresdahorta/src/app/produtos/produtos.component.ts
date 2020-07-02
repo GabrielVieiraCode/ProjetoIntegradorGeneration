@@ -148,13 +148,13 @@ export class ProdutosComponent implements OnInit {
     }
   }
 
-  filtrarProdutos() {
-    this.ordenar = (<HTMLInputElement>document.getElementById("filtrar-por-select")).value;
-    this.direcao = (<HTMLInputElement>document.getElementById("ordem-select")).value;
-    this.quantidade = parseInt((<HTMLInputElement>document.getElementById("npag-select")).value);
-    this.findAllProdutos(this.pagina, this.quantidade, this.ordenar, this.direcao);
-    this.verificarNumeroDePaginas()
-  }
+  // filtrarProdutos() {
+  //   this.ordenar = (<HTMLInputElement>document.getElementById("filtrar-por-select")).value;
+  //   this.direcao = (<HTMLInputElement>document.getElementById("ordem-select")).value;
+  //   this.quantidade = parseInt((<HTMLInputElement>document.getElementById("npag-select")).value);
+  //   this.findAllProdutos(this.pagina, this.quantidade, this.ordenar, this.direcao);
+  //   this.verificarNumeroDePaginas()
+  // }
 
 
 
