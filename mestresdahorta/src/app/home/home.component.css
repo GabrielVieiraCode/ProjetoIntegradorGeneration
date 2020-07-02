@@ -155,6 +155,10 @@
 
 .btn:hover{
     color:darkgreen;  
+    box-shadow: 1px 1px 4px gray;
+    transition: color 0.5s;
+    font-weight: 700;
+       
 }
 
 .label-preco {
@@ -676,8 +680,9 @@
     .product-input1 {
         margin-left:38px;
     }
+
     .espaco-cardfun{
-        padding-top: 16px;
+        padding-top: 22px;
     }
 
     .titulo-funciona{
