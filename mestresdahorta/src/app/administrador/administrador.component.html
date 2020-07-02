@@ -1,12 +1,16 @@
 <div class="container text-geral">
 
 
-  <div class="w-100 mb-5">
+  <div class="botoes mb-5">
     <h2 class=" text-center text-titulo mb-3">Administrador</h2>
-    <button class="btn btn-outline-dark w-50 active mb-2" [routerLink]="['/administrador/usuarios']">Usuarios</button>
-    <button class="btn btn-outline-dark w-50 mb-2" [routerLink]="['/administrador/produtos']">Produtos</button>
-    <button class="btn btn-outline-dark w-50" [routerLink]="['/administrador/mensagens']">Mensagens</button>
-
+    <div class="d-flex">
+      <button class="btn btn-outline-dark  active  flex-fill mb-2 mr-2"
+        [routerLink]="['/administrador/usuarios']">Usuários</button>
+      <button class="btn btn-outline-dark flex-fill  mb-2 mr-2"
+        [routerLink]="['/administrador/produtos']">Produtos</button>
+      <button class="btn btn-outline-dark flex-fill  mb-2"
+        [routerLink]="['/administrador/mensagens']">Mensagens</button>
+    </div>
   </div>
   <!-- 
   <table class="table table-hover table-responsive-sm mt-">
@@ -39,12 +43,12 @@
 
 </div> -->
 
-  <table class="table table-hover table-responsive-sm ">
+  <table class="table table-hover table-responsive-sm">
     <thead>
-      <tr class="text-titulo bg-secondary text-light">
+      <tr class="text-geral bg-secondary text-light">
         <th scope="col">ID</th>
         <th scope="col">Nome</th>
-        <th scope="col">Email</th>
+        <th scope="col">E-mail</th>
         <!-- <th scope="col">Senha</th> -->
         <th scope="col">Ações</th>
 

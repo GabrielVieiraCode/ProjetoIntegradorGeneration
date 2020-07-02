@@ -148,13 +148,17 @@
 .btn{
     letter-spacing: 3px;
     color:black;
-    background-color: #8BA96B;
+    background-color: #C8F2C8;
     transition: color 0.5s;
-    border-radius: 18px;
+    border-radius: 17px;
 }
 
 .btn:hover{
-    color:white;  
+    color:darkgreen;  
+    box-shadow: 1px 1px 4px gray;
+    transition: color 0.5s;
+    font-weight: 700;
+       
 }
 
 .label-preco {
@@ -164,6 +168,7 @@
     letter-spacing: 1px;
     position: relative;
     left: 50px;
+    color: darkgreen;
 }
 
 .product-input1 {
@@ -675,8 +680,9 @@
     .product-input1 {
         margin-left:38px;
     }
+
     .espaco-cardfun{
-        padding-top: 16px;
+        padding-top: 22px;
     }
 
     .titulo-funciona{

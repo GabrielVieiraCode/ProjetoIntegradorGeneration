@@ -116,21 +116,27 @@ export class ProdutosComponent implements OnInit {
       this.pagina = 0;
       this.verificarNumeroDePaginas()
     }
-    }
+  }
+
+  paginar(pagina: any) {
+    this.pagina = pagina;
+    this.findAllProdutos(this.pagina, this.quantidade, this.ordenar, this.direcao)
+    // if(this.barraPesquisa != null) {
+    //   this.buscarPorNomeProdutoOrdenados(this.barraPesquisa, this.pagina, this.quantidade, this.ordenar, this.direcao)
+    //   window.scroll(0,0)
+    // } else {
+    //   this.findAllProdutos(pagina, this.quantidade);
+    //   window.scroll(0,0)
+    // }
+
+  }
+
+  // verificarNumeroDePaginas() {
+  //   if (this.numeroDePaginas == 0) {
+  //     this.arrayDePaginas.splice(0, this.arrayDePaginas.length)
+  //   }
   
-    paginar(pagina: any) {
-      this.pagina = pagina;
-      this.findAllProdutos(this.pagina, this.quantidade, this.ordenar,this.direcao)
-      // if(this.barraPesquisa != null) {
-      //   this.buscarPorNomeProdutoOrdenados(this.barraPesquisa, this.pagina, this.quantidade, this.ordenar, this.direcao)
-      //   window.scroll(0,0)
-      // } else {
-      //   this.findAllProdutos(pagina, this.quantidade);
-      //   window.scroll(0,0)
-      // }
-     
-    }
-  
+   
     verificarNumeroDePaginas(){
       if(this.numeroDePaginas == 0) {
        return this.arrayDePaginas.splice(0, this.arrayDePaginas.length)
@@ -140,19 +146,21 @@ export class ProdutosComponent implements OnInit {
         this.arrayDePaginas[i] = i;
       }
     }
-  
-    filtrarProdutos () {
-      this.ordenar = (<HTMLInputElement>document.getElementById("filtrar-por-select")).value;
-      this.direcao = (<HTMLInputElement>document.getElementById("ordem-select")).value;
-      this.quantidade = parseInt((<HTMLInputElement>document.getElementById("npag-select")).value);
-      this.findAllProdutos(this.pagina, this.quantidade, this.ordenar, this.direcao);
-      this.verificarNumeroDePaginas()
-    } 
   }
-  
+
+  filtrarProdutos() {
+    this.ordenar = (<HTMLInputElement>document.getElementById("filtrar-por-select")).value;
+    this.direcao = (<HTMLInputElement>document.getElementById("ordem-select")).value;
+    this.quantidade = parseInt((<HTMLInputElement>document.getElementById("npag-select")).value);
+    this.findAllProdutos(this.pagina, this.quantidade, this.ordenar, this.direcao);
+    this.verificarNumeroDePaginas()
+  }
 
 
-    window.scroll(0, 0)
+
+
+
+
 
 
 

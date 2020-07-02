@@ -1,24 +1,24 @@
 <section class="container">
-    <h1 class="col-md-12 text-center mt-200">fale conosco</h1>
+    <h1 class="col-md-12 text-center mt-5">fale conosco</h1>
     <div class="row ">
         <div class="col-md-6 ">
-            <form>
-                <!-- <fa-icon [icon]="faInstagram" class="faInstagram fa-3x p-3"></fa-icon> -->
-                <fa-icon [icon]="faUser" class="faUser fa-1x p-1 mr-2"></fa-icon>
-                <label for="Nome">Seu nome</label>
-                <input type="Nome" class="form-control" id="Nome">
-                <fa-icon [icon]="faEnvelope" class="faEnvelope fa-1x p-1 mr-2"></fa-icon>
-                <label for="Email">E-mail</label>
-                <input type="Email" class="form-control" id="Email">
-                <fa-icon [icon]="faPhone" class="faPhone fa-1x p-1 mr-2"></fa-icon>
-                <label for="Tel">Telefone</label>
-                <input type="Tel" class="form-control" id="Tel">
+            <!-- <form> -->
+            <!-- <fa-icon [icon]="faInstagram" class="faInstagram fa-3x p-3"></fa-icon> -->
+            <fa-icon [icon]="faUser" class="faUser fa-1x p-1 mr-2"></fa-icon>
+            <label for="Nome">Nome</label>
+            <input type="Nome" class="form-control" id="Nome" [(ngModel)]="contato.nome">
+            <fa-icon [icon]="faEnvelope" class="faEnvelope fa-1x p-1 mr-2"></fa-icon>
+            <label for="Email">E-mail</label>
+            <input type="Email" class="form-control" id="Email" [(ngModel)]="contato.email">
+            <fa-icon [icon]="faPhone" class="faPhone fa-1x p-1 mr-2"></fa-icon>
+            <label for="Tel">Telefone</label>
+            <input type="Tel" class="form-control mr-2" id="Tel" [(ngModel)]="contato.telefone">
 
-                <label for="Mensagem">Mensagem</label>
-                <textarea class="form-control" id="Mensagem" rows="8"></textarea>
-                <hr>
-                <button type="submit" class="btn btn-outline w-100  botao-enviar">Enviar</button>
-            </form>
+            <label for="Mensagem">Mensagem</label>
+            <textarea class="form-control" id="Mensagem" rows="8" [(ngModel)]="contato.mensagem"></textarea>
+            <hr>
+            <button type="submit" class="btn w-100 " (click)="publicar()">Enviar</button>
+            <!-- </form> -->
         </div>
         <div class="col-md-6 ">
             <div class="mapa">
