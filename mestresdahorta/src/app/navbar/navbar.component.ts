@@ -50,7 +50,7 @@ export class NavbarComponent implements OnInit {
     let ok = false;
     let perfil = localStorage.getItem('perfil');
 
-    if (perfil == 'adm') {
+    if (perfil === 'adm30@gmail.com') {
       ok = true;
     }
     return ok;

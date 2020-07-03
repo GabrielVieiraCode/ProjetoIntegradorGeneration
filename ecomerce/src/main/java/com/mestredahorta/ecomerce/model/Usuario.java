@@ -37,7 +37,7 @@ public class Usuario {
 	@NotNull
 	private String senha;
 	
-	private String perfil;
+	private String perfil = "user";
 	
 //	@ManyToOne
 //	@JoinColumn(name = "cd_tipo")
