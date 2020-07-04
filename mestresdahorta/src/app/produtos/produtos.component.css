@@ -77,7 +77,7 @@ body{
 
 
 .card img{
-    max-height: 123px;
+    max-height: 128px;
 
 }
 
@@ -93,7 +93,7 @@ body{
 .card-title {
     font-family:'Fredoka One', cursive;
     letter-spacing: 2px;
-    letter-spacing: 2px;
+    font-size: 16pt;
 }
 
 .card{
