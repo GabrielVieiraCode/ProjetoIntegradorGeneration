@@ -279,7 +279,7 @@ input {
 
 
 
-@media screen and (min-width:1199px) and (max-width:1309px){
+@media screen and (min-width:1200px) and (max-width:1309px){
 
 
     
@@ -377,9 +377,39 @@ input {
 
 
 
-  @media screen and (min-width:992px) and (max-width:1198px){
-  
+  @media screen and (min-width:992px) and (max-width:1199px){
+   .container{
+        margin-top:65px;
     
+    }
+
+    #card img {
+        height:128px;
+
+    }
+
+
+    label {
+        font-family: monospace;
+        font-size: 13pt;
+        font-weight: normal;
+        letter-spacing: 1px;
+        position: relative;
+        left:40px;
+    }
+
+    .product-input1{
+        margin-left:-20px;
+        font-family: monospace;
+        border-color: #dddddd;
+        border-radius: 8px;
+    }
+
+    #btn-comprar{
+        margin-left: 27px;
+    }
+
+   
   #filtro{
     
     position: relative;
@@ -473,19 +503,26 @@ input {
     }
 
     #card img {
-        max-height:72px;
+        height:72px;
 
     }
+
+    .card-title {
+        font-family:'Fredoka One', cursive;
+        letter-spacing: 2px;
+        font-size: 14pt;
+    }
+
     label {
         font-family: monospace;
         font-size: 13pt;
         font-weight: normal;
         letter-spacing: 1px;
         position: relative;
-        left:2px;
+        left:8px;
     }
     .product-input1{
-        margin-left:-57px;
+        margin-left:-49px;
         font-family: monospace;
         border-color: #dddddd;
         border-radius: 8px;
