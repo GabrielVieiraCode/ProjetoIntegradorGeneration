@@ -4,5 +4,4 @@ export class UsuarioLogin {
     public senha: string
     public token: string
     public perfil: string
-
 }
