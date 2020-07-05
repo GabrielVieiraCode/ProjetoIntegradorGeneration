@@ -32,9 +32,7 @@ public class BasicSecurityConfig  extends WebSecurityConfigurerAdapter {
 	  .antMatchers("/usuarios/cadastrar").permitAll()
 	  .antMatchers("/produtos").permitAll()
 	  .antMatchers("/produtos/*").permitAll()
-
 	  .antMatchers("/produtos/nome/*").permitAll()
-
 	  .antMatchers("/usuarios").permitAll()
 	  .antMatchers("/usuarios/*").permitAll()
 	  .antMatchers("/contato").permitAll()

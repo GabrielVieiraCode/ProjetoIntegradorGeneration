@@ -44,6 +44,18 @@ p {
     transition: 0.3s; 
 }
 
+.faLinkedin, .faGithub{
+    color: #27B7A8;
+}
+
+.faGithub:hover{
+    color: black;
+}
+
+.faLinkedin:hover{
+    color: #3b5998;
+}
+
 /* MEDIA QUERYS  */
 
 @media screen and (max-width: 991px){
