@@ -164,8 +164,13 @@ input {
  /* MEDIA QUERY */
 
 
+<<<<<<< HEAD
 
 
+=======
+
+
+>>>>>>> developer
   @media screen and (min-width:992px) and (max-width:1199px){
    .container{
         margin-top:65px;
@@ -544,3 +549,18 @@ input {
         margin-right:-20px; 
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

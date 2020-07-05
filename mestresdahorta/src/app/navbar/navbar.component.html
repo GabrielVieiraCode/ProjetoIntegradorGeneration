@@ -13,7 +13,9 @@
 
             <div class="menu-logo mr-5 ml-5 d-none d-lg-block ">
                 <a class="navbar-brand" href="#">
+
                     <img src="../../assets/img/logo.png" id="Logo-nav" />
+
                 </a>
             </div> <!-- menu-logo -->
 
@@ -79,6 +81,11 @@
                     <div *ngIf="btnSair()">
                         <li class="nav-item  pr-4 pl-4">
                             <a class="nav-link text-titulo text-uppercase" (click)="sair()">SAIR</a>
+                        </li>
+                    </div>
+                    <div *ngIf="btnAdm()">
+                        <li class="nav-item  pr-4 pl-4">
+                            <a class="nav-link text-titulo text-uppercase" routerLink='/administrador'>ADM</a>
                         </li>
                     </div>
                 </ul>

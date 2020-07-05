@@ -1,6 +1,7 @@
 /* Cofigaçoes geral */
 .page-footer{
     background-color: #F7F7F7;
+    width: auto;
 }
 
 .text-titulo{
@@ -53,3 +54,23 @@ a{
     background-color: #27B7A8;
 }
 
+@media screen and (max-width: 991px){
+    #icones-rodape{
+        width: 100%;
+        left: 65px;
+    }
+}
+
+@media screen and (max-width: 782px){
+    #icones-rodape{
+        width: auto;
+        left: 40px;
+    }
+} 
+
+@media screen and (max-width: 767px){
+    #icones-rodape{
+        width: auto;
+        left: 0px;
+    }
+} 

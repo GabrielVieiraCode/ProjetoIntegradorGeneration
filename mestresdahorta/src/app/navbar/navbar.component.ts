@@ -55,6 +55,15 @@ pesquisarNav(){
     }
     return ok;
   }
+  btnAdm() {
+    let ok = false;
+    let perfil = localStorage.getItem('perfil');
+
+    if (perfil === 'adm@mestredahorta.com') {
+      ok = true;
+    }
+    return ok;
+  }
 
 
   teste(nome: string) {
