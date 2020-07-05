@@ -9,6 +9,8 @@ public class UsuarioLogin {
 	private String senha;
 	
 	private String token;
+	
+	private String perfil;
 
 	public String getNome() {
 		return nome;
@@ -40,6 +42,14 @@ public class UsuarioLogin {
 
 	public void setToken(String token) {
 		this.token = token;
+	}
+
+	public String getPerfil() {
+		return perfil;
+	}
+
+	public void setPerfil(String perfil) {
+		this.perfil = perfil;
 	}
 	
 	
