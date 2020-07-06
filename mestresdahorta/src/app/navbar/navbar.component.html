@@ -21,14 +21,16 @@
 
             <div class="menu-pesquisar d-flex justify-content-center bd-highlight w-100">
                 <div class="pesquisar-form form-inline">
-                    
-                    <input  id="barra-pesquisa" class="form-input form-control shadow-none" type="search" placeholder="Procurando algo?" 
-                        aria-label="Search" name="barra-pesquisa" [(ngModel)]= "barraPesquisa">
 
-                    <button id="buscar-btn" class="form-button btn bg-dark shadow-none" type="button" (click) = "pesquisarNav()"> 
-                        
+                    <input id="barra-pesquisa" class="form-input form-control shadow-none" type="search"
+                        placeholder="Procurando algo?" aria-label="Search" name="barra-pesquisa"
+                        [(ngModel)]="barraPesquisa">
+
+                    <button id="buscar-btn" class="form-button btn bg-dark shadow-none" type="button"
+                        (click)="pesquisarNav()">
+
                         <fa-icon [icon]="faPesquisar" class="faPesquisar fa-1x text-light"></fa-icon>
-                        
+
                     </button>
                 </div>
             </div> <!-- menu-pesquisar -->
@@ -78,16 +80,18 @@
                         <a class="nav-link text-titulo text-uppercase" routerLink='/contato'>CONTATO</a>
                     </li>
 
-                    <div *ngIf="btnSair()">
-                        <li class="nav-item  pr-4 pl-4">
-                            <a class="nav-link text-titulo text-uppercase" (click)="sair()">SAIR</a>
-                        </li>
-                    </div>
                     <div *ngIf="btnAdm()">
                         <li class="nav-item  pr-4 pl-4">
                             <a class="nav-link text-titulo text-uppercase" routerLink='/administrador'>ADM</a>
                         </li>
                     </div>
+
+                    <div *ngIf="btnSair()">
+                        <li class="nav-item  pr-4 pl-4">
+                            <a class="nav-link text-titulo text-uppercase" (click)="sair()">SAIR</a>
+                        </li>
+                    </div>
+
                 </ul>
 
 
